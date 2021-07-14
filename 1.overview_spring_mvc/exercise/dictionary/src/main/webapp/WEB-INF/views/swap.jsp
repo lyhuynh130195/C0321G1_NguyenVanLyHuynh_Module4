@@ -49,7 +49,7 @@
     <div class="item">
         <h3>English</h3>
         <p>${result1}</p>
-        <p style="color: red">${resultNotfound1}</p>
+        <p style="color: #ebf5cc">${resultNotfound1}</p>
     </div>
 </div>
 </body>

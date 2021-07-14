@@ -29,7 +29,7 @@ public class DictionaryRepoImpl implements DictionaryRepo {
     public String findByEnglish(String en) {
         Dictionary dictionary =
                 dictionaryList.stream()
-                        .filter(dictionarys -> dictionarys.getEnglish().equals(en))
+                        .filter(dictionarys -> dictionarys.getEnglish().toLowerCase().equals(en.toLowerCase()))
                         .findFirst()
                         .orElse(null);
 
@@ -40,7 +40,7 @@ public class DictionaryRepoImpl implements DictionaryRepo {
     public String findByVietnamese(String vi) {
        Dictionary dictionary=
                dictionaryList.stream()
-               .filter(dictionary1 -> dictionary1.getVietnamese().equals(vi))
+               .filter(dictionary1 -> dictionary1.getVietnamese().toLowerCase().equals(vi.toLowerCase()))
                .findFirst()
                .orElse(null);
        return dictionary==null?"":dictionary.getEnglish();

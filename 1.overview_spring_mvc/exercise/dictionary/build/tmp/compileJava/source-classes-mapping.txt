@@ -2,11 +2,11 @@ com/dictionary/model/Dictionary.java
  com.dictionary.model.Dictionary
 com/dictionary/service/DictionaryService.java
  com.dictionary.service.DictionaryService
-com/dictionary/repository/DictionaryRepoImpl.java
- com.dictionary.repository.DictionaryRepoImpl
+com/dictionary/controller/DictionaryController.java
+ com.dictionary.controller.DictionaryController
 com/dictionary/repository/DictionaryRepo.java
  com.dictionary.repository.DictionaryRepo
 com/dictionary/service/DictionaryServiceImpl.java
  com.dictionary.service.DictionaryServiceImpl
-com/dictionary/controller/DictionaryController.java
- com.dictionary.controller.DictionaryController
+com/dictionary/repository/DictionaryRepoImpl.java
+ com.dictionary.repository.DictionaryRepoImpl

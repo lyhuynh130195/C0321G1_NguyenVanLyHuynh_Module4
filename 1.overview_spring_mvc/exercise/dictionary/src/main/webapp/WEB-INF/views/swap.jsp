@@ -2,13 +2,13 @@
   Created by IntelliJ IDEA.
   User: Sony-VaiO
   Date: 7/14/2021
-  Time: 4:24 PM
+  Time: 7:09 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>English - Viet Nam</title>
+    <title>Viet Nam - English</title>
     <style>
         .button {
             background-color: #4CAF50;
@@ -37,19 +37,19 @@
 <body>
 <div class="container">
     <div class="item">
-        <h3>English</h3>
-        <form method="post" action="/translate">
-            <input type="text" name="english" required>
+        <h3>Việt Nam</h3>
+        <form method="post" action="/swap/translate">
+            <input type="text" name="vietNamese" required>
             <input type="submit" value="search">
         </form>
     </div>
-    <div  class="item2">
-        <a href="/swap" class="button">Swap</a>
+    <div class="item2">
+        <a href="/" class="button">Swap</a>
     </div>
-    <div  class="item">
-        <h3>Việt Nam</h3>
-        <p>${result}</p>
-        <p style="color: red">${resultNotfound}</p>
+    <div class="item">
+        <h3>English</h3>
+        <p>${result1}</p>
+        <p style="color: red">${resultNotfound1}</p>
     </div>
 </div>
 </body>

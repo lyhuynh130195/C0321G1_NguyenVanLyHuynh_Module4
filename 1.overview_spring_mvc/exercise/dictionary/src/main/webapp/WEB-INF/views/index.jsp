@@ -25,6 +25,9 @@
         <h3>Việt Nam</h3>
       <p>${result}</p>
     </div>
+    <div>
+        <p>${resultNotfound}</p>
+    </div>
 </div>
 </body>
 </html>

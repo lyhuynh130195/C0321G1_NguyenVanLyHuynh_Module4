@@ -21,7 +21,12 @@ public class DictionaryController {
 
 @PostMapping(value = "/translate")
     public ModelAndView translate(@RequestParam  String english ){
-        return new ModelAndView("index","result",dictionaryService.findVieByEng(english));
-}
+        String result =dictionaryService.findVieByEng(english);
+        if(result==""){
+            return new ModelAndView("index","resultNotfound","không tìm thấy");
+        }
+            return new ModelAndView("index","result",result);
+        }
 
 }
+

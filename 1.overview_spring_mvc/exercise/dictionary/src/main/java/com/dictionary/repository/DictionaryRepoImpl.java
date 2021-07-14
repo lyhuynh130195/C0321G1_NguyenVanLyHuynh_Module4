@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
+@Repository
 public class DictionaryRepoImpl implements DictionaryRepo {
     private static List<Dictionary> dictionaryList = new ArrayList<>();
 

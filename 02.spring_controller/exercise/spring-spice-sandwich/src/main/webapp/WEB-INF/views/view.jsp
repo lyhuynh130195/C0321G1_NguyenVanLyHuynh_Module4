@@ -13,13 +13,16 @@
 </head>
 <body>
 <h1>List spice sandwich</h1>
-
+<c:if test="${listSpice.size()>0}">
 <ol>
     <c:forEach items="${listSpice}" var="spice">
         <li>${spice}</li>
     </c:forEach>
 </ol>
-
+</c:if>
+<c:if test="${listSpice.size()=0}">
+    <h3>Not choose spice sandwich</h3>
+</c:if>
 <a href="/">back menu</a>
 </body>
 </html>

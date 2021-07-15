@@ -14,18 +14,8 @@ public class CalculatorController {
     CalculatorService calculatorService;
 
     @RequestMapping("/calculate")
-    public ModelAndView addition(@RequestParam double num1, double num2, String bt_type) {
-        switch (bt_type) {
-            case "addition":
-                return new ModelAndView("index", "result", calculatorService.addition(num1, num2));
-            case "subtract":
-                return new ModelAndView("index", "result", calculatorService.subtraction(num1, num2));
-            case "multiply":
-                return new ModelAndView("index", "result", calculatorService.multiplication(num1, num2));
-            case "division":
-                return new ModelAndView("index", "result", calculatorService.division(num1, num2));
-        }
-        return null;
+    public ModelAndView addition(@RequestParam double num1, double num2, String calculateChoose) {
+        return new ModelAndView("index", "result", calculatorService.calculate(num1, num2, calculateChoose));
     }
 
     @RequestMapping("/")

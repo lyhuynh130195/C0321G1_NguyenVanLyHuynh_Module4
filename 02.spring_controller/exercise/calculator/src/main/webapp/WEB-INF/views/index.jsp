@@ -41,7 +41,7 @@
             <button type="button" id="subtract" onclick="doCalculate(this.id)">Subtraction(-)</button>
             <button type="button" id="multiply" onclick="doCalculate(this.id)">Multiplication(*)</button>
             <button type="button" id="division" onclick="doCalculate(this.id)">Division(/)</button>
-            <input type="hidden" name="bt_type" id="bt_type">
+            <input type="hidden" name="calculateChoose" id="bt_type">
         </div>
     </form>
 </div>

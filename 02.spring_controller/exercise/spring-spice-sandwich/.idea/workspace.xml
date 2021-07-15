@@ -5,266 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="672f33ec-6c6c-41a4-971c-8b46b354c63a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../01.overview_spring_mvc/exercise/dictionary/.idea/dictionary.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../01.overview_spring_mvc/exercise/dictionary/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../01.overview_spring_mvc/exercise/dictionary/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../01.overview_spring_mvc/practice/spring-greeting/.idea/spring-greeting.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.gradle/configuration-cache/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/controller/CalculatorController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/repository/CalculatorRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/repository/CalculatorRepositoryImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/service/CalculatorService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/service/CalculatorServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/build/libs/calculator-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/controller/CalculatorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/repository/CalculatorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/repository/CalculatorRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/service/CalculatorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/service/CalculatorServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../calculator/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.8/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.8/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/configuration-cache/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/spice_sandwich/controller/SpiceSandwichController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/spring-spice-sandwich-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/controller/SpiceSandwichController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/repository/SpiceSandwichRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/repository/SpiceSandwichRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/service/SpiceSandwichService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/service/SpiceSandwichServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/.idea/modules/email-validate-gradle.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/src/main/java/com/codegym/controller/EmailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/src/main/webapp/WEB-INF/views/success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-gradle/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-maven/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-maven/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-maven/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-maven/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-maven/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-maven/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-maven/src/main/java/com/codegym/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-maven/src/main/webapp/WEB-INF/configs/spring-config-mvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-maven/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-maven/src/main/webapp/WEB-INF/views/success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-maven/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/.gradle/6.8/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/.gradle/6.8/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/.gradle/configuration-cache/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/build/classes/java/main/com/codegym/controller/TimeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/build/libs/spring-timezone-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/src/main/java/com/codegym/controller/TimeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring-timezone/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/6.8/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/6.8/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/6.8/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/configuration-cache/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.idea/libraries-with-intellij-classes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/build/classes/java/main/com/curency/controller/ConvertController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/build/classes/java/main/com/curency/service/CalculateService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/build/classes/java/main/com/curency/service/CalculateServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/build/libs/currency_conversion-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/src/main/java/com/curency/controller/ConvertController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/src/main/java/com/curency/service/CalculateService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/src/main/java/com/curency/service/CalculateServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/currency_conversion/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/6.8/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/6.8/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/6.8/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/configuration-cache/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/build/classes/java/main/com/dictionary/controller/DictionaryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/build/classes/java/main/com/dictionary/model/Dictionary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/build/classes/java/main/com/dictionary/repository/DictionaryRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/build/classes/java/main/com/dictionary/repository/DictionaryRepoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/build/classes/java/main/com/dictionary/service/DictionaryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/build/classes/java/main/com/dictionary/service/DictionaryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/build/libs/dictionary-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/src/main/java/com/dictionary/controller/DictionaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/src/main/java/com/dictionary/model/Dictionary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/src/main/java/com/dictionary/repository/DictionaryRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/src/main/java/com/dictionary/repository/DictionaryRepoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/src/main/java/com/dictionary/service/DictionaryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/src/main/java/com/dictionary/service/DictionaryServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/src/main/webapp/WEB-INF/views/swap.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/exercise/dictionary/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/customer-management" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/6.8/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/6.8/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/6.8/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/configuration-cache/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.idea/libraries-with-intellij-classes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.idea/spring-greeting.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/build/classes/java/main/controller/GreetingController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/build/libs/spring-greeting-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/src/main/java/controller/GreetingController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../1.overview_spring_mvc/practice/spring-greeting/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../01.overview_spring_mvc/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../01.overview_spring_mvc/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/controller/CalculatorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/controller/CalculatorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/repository/CalculatorRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/repository/CalculatorRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/service/CalculatorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/service/CalculatorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/service/CalculatorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/service/CalculatorServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/build/libs/calculator-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/build/libs/calculator-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/controller/CalculatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/controller/CalculatorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/repository/CalculatorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/repository/CalculatorRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/service/CalculatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/service/CalculatorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/service/CalculatorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/service/CalculatorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calculator/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/repository/SpiceSandwichRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/repository/SpiceSandwichRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/service/SpiceSandwichService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/service/SpiceSandwichService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/service/SpiceSandwichServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/service/SpiceSandwichServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,6 +105,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -438,6 +214,7 @@
       <updated>1626319712582</updated>
       <workItem from="1626319714923" duration="6889000" />
       <workItem from="1626332345277" duration="4160000" />
+      <workItem from="1626355773706" duration="810000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,8 @@
+com/codegym/service/ConfigurationEmailServiceImpl.java
+ com.codegym.service.ConfigurationEmailServiceImpl
+com/codegym/model/ConfigurationEmail.java
+ com.codegym.model.ConfigurationEmail
+com/codegym/service/ConfigurationEmailService.java
+ com.codegym.service.ConfigurationEmailService
+com/codegym/controller/ConfigurationEmailController.java
+ com.codegym.controller.ConfigurationEmailController

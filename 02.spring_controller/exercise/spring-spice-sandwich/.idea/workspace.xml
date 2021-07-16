@@ -6,30 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="672f33ec-6c6c-41a4-971c-8b46b354c63a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../../01.overview_spring_mvc/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../01.overview_spring_mvc/practice/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/controller/CalculatorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/controller/CalculatorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/repository/CalculatorRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/repository/CalculatorRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/service/CalculatorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/service/CalculatorService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/service/CalculatorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/build/classes/java/main/com/calculator/service/CalculatorServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/build/libs/calculator-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/build/libs/calculator-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/controller/CalculatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/controller/CalculatorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/repository/CalculatorRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/repository/CalculatorRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/service/CalculatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/service/CalculatorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/service/CalculatorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/src/main/java/com/calculator/service/CalculatorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calculator/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../calculator/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/repository/SpiceSandwichRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/repository/SpiceSandwichRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/service/SpiceSandwichService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/service/SpiceSandwichService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/service/SpiceSandwichServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spice_sandwich/service/SpiceSandwichServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +191,7 @@
       <updated>1626319712582</updated>
       <workItem from="1626319714923" duration="6889000" />
       <workItem from="1626332345277" duration="4160000" />
-      <workItem from="1626355773706" duration="810000" />
+      <workItem from="1626355773706" duration="933000" />
     </task>
     <servers />
   </component>

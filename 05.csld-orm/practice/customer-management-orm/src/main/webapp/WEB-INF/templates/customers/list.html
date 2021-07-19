@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="customers/layout::head">
+<body>
+<a th:href="@{customers/create}">Add New Customer</a>
+<div class="notify1">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<table id="customers">
+    <caption>Customers List</caption>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Delete</th>
+        <th>Edit</th>
+        <th>View</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="c : ${customers}">
+        <td th:text="${c.id}"></td>
+        <td th:text="${c.getName()}"></td>
+        <td th:text="${c.email}"></td>
+        <td th:text="${c.address}"></td>
+        <td><a th:href="@{customers/{id}/delete(id=${c.getId()})}">Delete</a></td>
+        <td><a th:href="@{customers/{id}/edit(id=${c.getId()})}">Edit</a></td>
+        <td><a th:href="@{/customers/{id}(id=${c.id})}">View</a></td>
+    </tr>
+    </tbody>
+</table>
+<footer th:replace="/customers/layout :: footer"></footer>
+</body>
+</html>

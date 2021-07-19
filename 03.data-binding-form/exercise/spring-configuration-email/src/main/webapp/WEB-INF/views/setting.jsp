@@ -16,6 +16,7 @@
             padding: 1px 6px;
             border: solid black 1px;
             background-color: rgb(239, 239, 239);
+
         }
     </style>
 </head>

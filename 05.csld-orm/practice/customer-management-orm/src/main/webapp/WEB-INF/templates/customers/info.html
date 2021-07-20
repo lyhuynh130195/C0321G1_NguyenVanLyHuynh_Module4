@@ -11,19 +11,19 @@
 <div id="detail">
   <div class="customerDetail">
     <label>ID:</label>
-    <label th:text="${customer.id}"></label>
+    <label>${id}</label>
   </div>
   <div class="customerDetail">
     <label>Name:</label>
-    <label th:text="${customer.name}"></label>
+    <label>${name}</label>
   </div>
   <div class="customerDetail">
     <label>Email:</label>
-    <label th:text="${customer.email}"></label>
+    <label>${email}</label>
   </div>
   <div class="customerDetail">
     <label>Address:</label>
-    <label th:text="${customer.address}"></label>
+    <label>${address}</label>
   </div>
 </div>
 <footer th:replace="customers/layout :: footer"></footer>

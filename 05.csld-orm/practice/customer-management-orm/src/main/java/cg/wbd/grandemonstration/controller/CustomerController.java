@@ -1,7 +1,8 @@
 package cg.wbd.grandemonstration.controller;
 
-import cg.wbd.grandemonstration.model.Customer;
-import cg.wbd.grandemonstration.service.CustomerService;
+
+import cg.wbd.grandemonstration.model.bean.Customer;
+import cg.wbd.grandemonstration.model.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -63,7 +64,7 @@ public class CustomerController {
         return "customers/edit";
     }
     @PostMapping(value = "/update")
-    public String update(Customer customer,RedirectAttributes redirectAttributes){
+    public String update(Customer customer, RedirectAttributes redirectAttributes){
         redirectAttributes.addFlashAttribute("success", "Update customer successfully");
         customerService.update(customer);
         return "redirect:/customers";

@@ -4,13 +4,13 @@ cg/wbd/grandemonstration/config/AppConfig.java
  cg.wbd.grandemonstration.config.AppConfig
 cg/wbd/grandemonstration/model/bean/Customer.java
  cg.wbd.grandemonstration.model.bean.Customer
+cg/wbd/grandemonstration/model/service/CustomerServiceImpl.java
+ cg.wbd.grandemonstration.model.service.CustomerServiceImpl
 cg/wbd/grandemonstration/model/repository/CustomerRepository.java
  cg.wbd.grandemonstration.model.repository.CustomerRepository
 cg/wbd/grandemonstration/model/repository/HibernateCustomerRepositoryImpl.java
  cg.wbd.grandemonstration.model.repository.HibernateCustomerRepositoryImpl
 cg/wbd/grandemonstration/model/service/CustomerService.java
  cg.wbd.grandemonstration.model.service.CustomerService
-cg/wbd/grandemonstration/model/service/HibernateCustomerServiceImpl.java
- cg.wbd.grandemonstration.model.service.HibernateCustomerServiceImpl
 cg/wbd/grandemonstration/controller/CustomerController.java
  cg.wbd.grandemonstration.controller.CustomerController

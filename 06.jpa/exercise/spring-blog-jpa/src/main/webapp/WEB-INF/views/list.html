@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<head th:replace="/layout :: head"></head>
 <body>
 <a th:href="@{/create}">Create New Blog</a>
 <p th:text="${success}"></p>
-<table>
+<table id="blog">
+  <thead>
   <tr>
     <th>ID</th>
     <th>Name Blog</th>
@@ -17,6 +15,8 @@
     <th>Delete</th>
     <th>Xem nội dung</th>
   </tr>
+  </thead>
+  <tbody>
   <tr th:each="blog:${listBlog}">
     <td th:text="${blog.id}"></td>
     <td th:text="${blog.nameBlog}"></td>
@@ -26,6 +26,7 @@
     <td><a th:href="@{/{id}/delete(id=${blog.id})}">Delete</a></td>
     <td><a th:href="@{/{id}/view(id=${blog.id})}">View</a></td>
   </tr>
+  </tbody>
 </table>
 </body>
 </html>

@@ -45,7 +45,7 @@ public class BlogController {
 
     @GetMapping(value = "/{id}/delete")
     public String reomve(@PathVariable int id,RedirectAttributes redirectAttributes){
-        redirectAttributes.addFlashAttribute("success","Update blog successfully");
+        redirectAttributes.addFlashAttribute("success","Delete blog successfully");
         blogService.remove(blogService.findById(id));
         return "redirect:/list";
     }

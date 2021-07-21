@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Create new blog</title>
-</head>
+<head th:replace="/layout :: head"></head>
 <body>
 <h1>Create customer</h1>
 <p>
     <a href="/list">Blog List</a>
 </p>
 
-<form th:action="@{/update}" th:object="${blog}" method="post">
-    <table>
-        <tr>
-            <td>Id</td>
-            <td><input type="hidden" th:field="*{id}"></td>
-        </tr>
-        <tr>
-            <td>Name Blog:</td>
-            <td><input type="text" th:field="*{nameBlog}"/></td>
-        </tr>
-        <tr>
-            <td>Species Blog:</td>
-            <td><input type="text" th:field="*{species}"/></td>
-        </tr>
-        <tr>
-            <td>Name Author:</td>
-            <td><input type="text" th:field="*{nameAuthor}"/></td>
-        </tr>
-        <tr>
-            <td>Content</td>
-            <td><input type="text" th:field="*{content}"></td>
-        </tr>
+<form id="form" th:action="@{/update}" th:object="${blog}" method="post">
+    <div>
+        <div>
+            <label>Id</label>
+            <input type="hidden" th:field="*{id}">
+        </div>
+        <div>
+            <label>Name Blog:</label>
+            <input type="text" th:field="*{nameBlog}"/>
+        </div>
+        <div>
+            <label>Species Blog:</label>
+            <input type="text" th:field="*{species}"/>
+        </div>
+        <div>
+            <label>Name Author:</label>
+            <input type="text" th:field="*{nameAuthor}"/>
+        </div>
+        <div>
+            <label>Content</label>
+            <input type="text" th:field="*{content}">
+        </div>
 
-        <tr>
-            <td><input type="submit" value="Update"></td>
-        </tr>
-    </table>
+        <div>
+            <input type="submit" value="Update">
+        </div>
+    </div>
 </form>
 </body>
 </html>

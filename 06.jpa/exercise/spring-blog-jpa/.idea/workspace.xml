@@ -5,10 +5,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de026cc9-17b5-4936-9982-af28689c3fe5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-customer-management" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/6.8/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/6.8/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/6.8/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/configuration-cache/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.idea/spring-data-jpa-customer-management.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build/classes/java/main/com/codegym/cms/configuration/AppConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build/classes/java/main/com/codegym/cms/configuration/AppInit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build/classes/java/main/com/codegym/cms/controller/CustomerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build/classes/java/main/com/codegym/cms/model/bean/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build/classes/java/main/com/codegym/cms/model/repository/CustomerRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build/classes/java/main/com/codegym/cms/model/repository/CustomerRepositoryImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build/classes/java/main/com/codegym/cms/model/repository/GeneralRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build/classes/java/main/com/codegym/cms/model/service/CustomerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build/classes/java/main/com/codegym/cms/model/service/CustomerServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build/classes/java/main/com/codegym/cms/model/service/GeneralService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build/libs/customer-management-jpa-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/java/com/codegym/cms/configuration/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/java/com/codegym/cms/configuration/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/java/com/codegym/cms/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/java/com/codegym/cms/formatter/ProvinceFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/java/com/codegym/cms/model/bean/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/java/com/codegym/cms/model/bean/Province.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/java/com/codegym/cms/model/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/java/com/codegym/cms/model/repository/ProvinceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/java/com/codegym/cms/model/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/java/com/codegym/cms/model/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/java/com/codegym/cms/model/service/GeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/java/com/codegym/cms/model/service/ProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/java/com/codegym/cms/model/service/ProvinceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/webapp/WEB-INF/views/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/webapp/WEB-INF/views/customer/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/webapp/WEB-INF/views/customer/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-jpa-customer-management/src/main/webapp/WEB-INF/views/customer/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../01.overview_spring_mvc/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../01.overview_spring_mvc/practice/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,17 +142,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -192,6 +241,7 @@
       <workItem from="1626858961640" duration="4826000" />
       <workItem from="1626864330085" duration="5245000" />
       <workItem from="1626869850549" duration="2254000" />
+      <workItem from="1626923591899" duration="709000" />
     </task>
     <servers />
   </component>

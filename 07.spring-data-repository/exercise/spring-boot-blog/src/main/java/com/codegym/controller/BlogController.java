@@ -76,8 +76,14 @@ public class BlogController {
 
     @PostMapping(value = "/select")
     public ModelAndView selectCategory(@PageableDefault(value = 5,sort = "date") Pageable pageable,@RequestParam int id,ModelMap modelMap){
+        if(id!=0){
         modelMap.addAttribute("listCategory",categoryService.findAll());
         return new ModelAndView("list_blog","listBlog",blogService.findAllByCategoryID(pageable,id));
+        }else{
+            modelMap.addAttribute("listCategory",categoryService.findAll());
+            return new ModelAndView("list_blog","listBlog",blogService.findAll(pageable));
+        }
+
     }
 
 }

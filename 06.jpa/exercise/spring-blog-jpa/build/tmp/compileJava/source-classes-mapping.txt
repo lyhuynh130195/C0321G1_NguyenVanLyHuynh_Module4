@@ -1,14 +1,14 @@
-com/codegym/model/service/BlogService.java
- com.codegym.model.service.BlogService
-com/codegym/model/bean/Blog.java
- com.codegym.model.bean.Blog
-com/codegym/model/repository/BlogRepository.java
- com.codegym.model.repository.BlogRepository
-com/codegym/model/service/BlogServiceImpl.java
- com.codegym.model.service.BlogServiceImpl
 com/codegym/config/AppConfiguration.java
  com.codegym.config.AppConfiguration
 com/codegym/config/AppInitializer.java
  com.codegym.config.AppInitializer
+com/codegym/model/repository/BlogRepository.java
+ com.codegym.model.repository.BlogRepository
+com/codegym/model/service/BlogService.java
+ com.codegym.model.service.BlogService
+com/codegym/model/bean/Blog.java
+ com.codegym.model.bean.Blog
 com/codegym/controller/BlogController.java
  com.codegym.controller.BlogController
+com/codegym/model/service/BlogServiceImpl.java
+ com.codegym.model.service.BlogServiceImpl

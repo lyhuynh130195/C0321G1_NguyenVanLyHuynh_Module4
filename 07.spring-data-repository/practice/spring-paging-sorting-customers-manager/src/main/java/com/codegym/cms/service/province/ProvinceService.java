@@ -3,6 +3,8 @@ package com.codegym.cms.service.province;
 import com.codegym.cms.model.Province;
 import com.codegym.cms.repository.IProvinceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -30,5 +32,10 @@ public class ProvinceService implements IProvinceService {
     @Override
     public void remove(Long id) {
         provinceRepository.deleteById(id);
+    }
+
+    @Override
+    public Page<Province> findAll(Pageable pageable) {
+        return provinceRepository.findAll(pageable);
     }
 }

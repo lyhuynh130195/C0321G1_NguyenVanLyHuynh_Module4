@@ -3,7 +3,6 @@ package com.codegym.model.bean;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "blog")
 public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

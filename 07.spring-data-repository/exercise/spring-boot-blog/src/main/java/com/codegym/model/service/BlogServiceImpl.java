@@ -42,4 +42,9 @@ public class BlogServiceImpl implements BlogService{
     public Page<Blog> findAllByCategoryID(Pageable pageable,int id) {
         return blogRepository.findAllByCategory_Id(pageable,id);
     }
+
+    @Override
+    public Page<Blog> findAllSearchName(Pageable pageable, String keyword) {
+        return blogRepository.getBlogsBySearchingName(pageable,"%" + keyword + "%");
+    }
 }

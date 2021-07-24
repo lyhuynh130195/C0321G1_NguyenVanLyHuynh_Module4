@@ -4,13 +4,13 @@
 </head>
 <body>
 <h3><a th:href="@{/blog/create}">Create new Blog</a></h3>
-<form th:action="@{/blog/search}" method="post">
-    <label class="search"><input type="text" th:name="name" placeholder="Enter blog name"></label>
+<form th:action="@{/blog/list}" >
+    <label class="search"><input type="text" th:name="keyword" placeholder="Enter blog name"></label>
     <label class="search"><input type="submit" value="search"></label>
 </form>
-<form th:action="@{/blog/select}" method="post">
+<form th:action="@{/blog/list}" method="get">
     <label>Category</label>
-    <select name="id">
+    <select name="category_id">
         <option th:each="c : ${listCategory}" th:value="${c.id}" th:text="${c.name}" ></option>
         <option value="0" th:text="All"></option>
     </select>
@@ -56,9 +56,14 @@
     </tbody>
 </table>
 <div>
-    <a th:href="@{'/blog/list'(page=${listBlog.number - 1})}" th:if="${listBlog.hasPrevious()}">Previous</a>
+    <a th:href="@{/blog/list(page=${listBlog.number - 1},category_id=${category_id},keyword=${keywordValue})}" th:if="${listBlog.hasPrevious()}">Previous</a>
     <span th:text="${listBlog.number + 1}"></span>/<span th:text="${listBlog.totalPages}"></span>
-    <a th:href="@{'/blog/list'(page=${listBlog.number + 1})}" th:if="${listBlog.hasNext()}">Next</a>
+    <a th:href="@{/blog/list(page=${listBlog.number + 1},category_id=${category_id},keyword=${keywordValue})}" th:if="${listBlog.hasNext()}">Next</a>
+</div>
+<div>
+        <span th:each="pageNo : ${#numbers.sequence(0, listBlog.totalPages - 1)}">
+            <a th:href="@{/blog/list(page = ${pageNo},category_id=${category_id},keyword=${keywordValue})}" th:text="${pageNo + 1} "></a>
+        </span>
 </div>
 <footer th:replace="/layout :: footer"></footer>
 </body>

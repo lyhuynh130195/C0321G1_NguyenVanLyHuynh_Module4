@@ -17,4 +17,7 @@ public interface BlogService {
 
     Page<Blog> findAllByCategoryID(Pageable pageable,int id);
 
+    Page<Blog> findAllSearchName(Pageable pageable,String  keyword);
+
+
 }

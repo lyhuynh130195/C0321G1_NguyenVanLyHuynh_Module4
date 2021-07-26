@@ -1,7 +1,7 @@
 package com.codegym.controller;
 
 import com.codegym.model.dto.UserDto;
-import com.codegym.model.entyti.User;
+import com.codegym.model.entity.User;
 import com.codegym.model.service.UserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,34 +14,33 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.validation.Valid;
-
 @Controller
 public class UserController {
     @Autowired
     UserService userService;
+
     @GetMapping(value = "/list")
-    public String showList(){
+    public String showList() {
         return "/list";
     }
 
     @GetMapping(value = "/create")
-    public String showFormCreate(Model model){
-        model.addAttribute("userDto",new UserDto());
+    public String showFormCreate(Model model) {
+        model.addAttribute("userDto", new UserDto());
         return "create";
     }
 
     @PostMapping(value = "/save")
     public String save(@Validated @ModelAttribute UserDto userDto, BindingResult bindingResult, Model model,
-                       RedirectAttributes redirectAttributes){
-        if(bindingResult.hasFieldErrors()){
-            model.addAttribute("userDto",userDto);
+                       RedirectAttributes redirectAttributes) {
+        if (bindingResult.hasFieldErrors()) {
+            model.addAttribute("userDto", userDto);
             return "create";
-        }else {
+        } else {
             User user = new User();
-            BeanUtils.copyProperties(userDto,user);
+            BeanUtils.copyProperties(userDto, user);
             userService.save(user);
-            redirectAttributes.addFlashAttribute("success","create new user successfully");
+            redirectAttributes.addFlashAttribute("success", "create new user successfully");
             return "redirect:/list";
         }
     }

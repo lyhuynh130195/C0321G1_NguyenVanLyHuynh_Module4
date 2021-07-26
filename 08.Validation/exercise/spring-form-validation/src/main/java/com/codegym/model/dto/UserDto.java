@@ -15,21 +15,20 @@ import javax.validation.constraints.*;
 public class UserDto {
 
     @NotBlank
-    @Size(min = 5,max=45,message ="first name length > 5 and <45")
+    @Size(min = 5, max = 45, message = "first name length >= 5 and =<45")
     private String firstName;
     @NotBlank
-    @Size(min = 5,max=45,message = "last name length > 5 and <45")
+    @Size(min = 5, max = 45, message = "last name length >= 5 and <=45")
     private String lastName;
 
-    @Pattern(regexp = "^\\d{10}$",message = "phone number invalid")
+    @Pattern(regexp = "^\\d{10}$", message = "phone number invalid")
     private String numberPhone;
 
-    @Min(value = 18,message = "age >=18")
+    @Min(value = 18, message = "age >=18")
     private Integer age;
 
     @Email(message = "email invalid")
     private String email;
-
 
 
 }

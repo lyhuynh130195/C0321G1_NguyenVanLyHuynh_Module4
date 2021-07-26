@@ -1,4 +1,4 @@
-package com.codegym.model.entyti;
+package com.codegym.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

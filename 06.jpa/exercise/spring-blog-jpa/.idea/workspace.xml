@@ -5,110 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de026cc9-17b5-4936-9982-af28689c3fe5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/java/com/codegym/SpringBootBlogApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/java/com/codegym/controller/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/java/com/codegym/controller/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/java/com/codegym/model/bean/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/java/com/codegym/model/bean/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/java/com/codegym/model/repository/BlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/java/com/codegym/model/repository/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/java/com/codegym/model/service/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/java/com/codegym/model/service/BlogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/java/com/codegym/model/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/java/com/codegym/model/service/CategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/resources/templates/list_blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/resources/templates/list_category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/test/java/com/codegym/SpringBootBlogApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/model/bean/Blog.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/model/bean/Blog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/spring-blog-jpa-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/spring-blog-jpa-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/model/bean/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/bean/Blog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.gradle/6.8/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.gradle/6.8/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.gradle/configuration-cache/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/configuration/AppConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/configuration/AppInit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/controller/CustomerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/controller/ProvinceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/formatter/ProvinceFormatter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/model/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/model/Province.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/repository/ICustomerRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/repository/IProvinceRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/service/IGeneralService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/service/customer/CustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/service/customer/ICustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/service/province/IProvinceService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/java/com/codegym/cms/service/province/ProvinceService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/webapp/WEB-INF/views/customer/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/webapp/WEB-INF/views/customer/delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/webapp/WEB-INF/views/customer/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/webapp/WEB-INF/views/customer/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/webapp/WEB-INF/views/error.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/webapp/WEB-INF/views/province/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/webapp/WEB-INF/views/province/delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/webapp/WEB-INF/views/province/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/webapp/WEB-INF/views/province/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-data-apj-customer-management-/src/main/webapp/WEB-INF/views/province/view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/6.8/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/6.8/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/build/classes/java/main/com/codegym/cms/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/build/classes/java/main/com/codegym/cms/controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/build/classes/java/main/com/codegym/cms/controller/ProvinceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/build/classes/java/main/com/codegym/cms/controller/ProvinceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/build/classes/java/main/com/codegym/cms/service/province/IProvinceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/build/classes/java/main/com/codegym/cms/service/province/IProvinceService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/build/classes/java/main/com/codegym/cms/service/province/ProvinceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/build/classes/java/main/com/codegym/cms/service/province/ProvinceService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/build/libs/spring-customers-manager-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/build/libs/spring-customers-manager-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/src/main/java/com/codegym/cms/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/src/main/java/com/codegym/cms/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/src/main/java/com/codegym/cms/controller/ProvinceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/src/main/java/com/codegym/cms/controller/ProvinceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/src/main/java/com/codegym/cms/repository/IProvinceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/src/main/java/com/codegym/cms/repository/IProvinceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/src/main/java/com/codegym/cms/service/province/IProvinceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/src/main/java/com/codegym/cms/service/province/IProvinceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/src/main/java/com/codegym/cms/service/province/ProvinceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/src/main/java/com/codegym/cms/service/province/ProvinceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/src/main/webapp/WEB-INF/views/province/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/practice/spring-paging-sorting-customers-manager/src/main/webapp/WEB-INF/views/province/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/src/main/java/com/codegym/CustomerValidationNumberphoneApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/src/main/java/com/codegym/controller/PhoneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/src/main/java/com/codegym/model/PhoneNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/src/main/resources/templates/result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/src/main/resources/validation-message.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/customer-validation-numberphone/src/test/java/com/codegym/CustomerValidationNumberphoneApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/validate-infor-user/src/main/java/com/codyegym/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/validate-infor-user/src/main/java/com/codyegym/model/bean/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/validate-infor-user/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../08.Validation/practice/validate-infor-user/src/main/resources/templates/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/java/com/codegym/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/java/com/codegym/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/resources/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/resources/templates/list_blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog/src/main/resources/templates/list_blog.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +91,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/codegym/jpa" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../07.spring-data-repository/exercise/spring-boot-blog" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
@@ -284,6 +202,7 @@
       <workItem from="1626923591899" duration="709000" />
       <workItem from="1626959895965" duration="4450000" />
       <workItem from="1626967521372" duration="606000" />
+      <workItem from="1627261366290" duration="50000" />
     </task>
     <servers />
   </component>

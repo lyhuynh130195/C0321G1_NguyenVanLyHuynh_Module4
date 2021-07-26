@@ -4,6 +4,7 @@ import com.codegym.model.bean.Blog;
 import com.codegym.model.service.BlogService;
 import com.codegym.model.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
@@ -21,9 +22,9 @@ public class BlogController {
     BlogService blogService;
     @Autowired
     CategoryService categoryService;
-    @GetMapping(value = {"/list","/"})
+    @GetMapping(value = "/list")
     public ModelAndView showList(@PageableDefault(value = 3,sort = "date") Pageable pageable, ModelMap modelMap,
-                                 @RequestParam Optional<String> keyword,@RequestParam Optional<Integer> category_id){
+     @RequestParam Optional<String> keyword,@RequestParam Optional<Integer> category_id){
      if(category_id.isPresent()){
          if(category_id.get()!=0){
              modelMap.addAttribute("listCategory",categoryService.findAll());
@@ -38,9 +39,11 @@ public class BlogController {
         if(keyword.isPresent()){
             keywordValue=keyword.get();
         }
+
         modelMap.addAttribute("listCategory",categoryService.findAll());
         modelMap.addAttribute("keywordValue",keywordValue);
-        return new ModelAndView("list_blog","listBlog", blogService.findAllSearchName(pageable,keywordValue));
+        Page<Blog> listBlog =  blogService.findAllSearchName(pageable,keywordValue);
+        return new ModelAndView("list_blog","listBlog",listBlog);
     }
 
 

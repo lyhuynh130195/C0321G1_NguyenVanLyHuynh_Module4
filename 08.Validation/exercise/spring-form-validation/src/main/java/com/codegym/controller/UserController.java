@@ -32,7 +32,7 @@ public class UserController {
     }
 
     @PostMapping(value = "/save")
-    public String save(@Valid @ModelAttribute UserDto userDto, BindingResult bindingResult, Model model,
+    public String save(@Validated @ModelAttribute UserDto userDto, BindingResult bindingResult, Model model,
                        RedirectAttributes redirectAttributes){
         if(bindingResult.hasFieldErrors()){
             model.addAttribute("userDto",userDto);

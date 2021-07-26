@@ -1,25 +1,23 @@
 package com.codegym.model.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class UserDto {
 
-    private Integer id;
-
+    @NotBlank
     @Size(min = 5,max=45,message ="first name length > 5 and <45")
     private String firstName;
-
+    @NotBlank
     @Size(min = 5,max=45,message = "last name length > 5 and <45")
     private String lastName;
 
@@ -31,5 +29,7 @@ public class UserDto {
 
     @Email(message = "email invalid")
     private String email;
+
+
 
 }

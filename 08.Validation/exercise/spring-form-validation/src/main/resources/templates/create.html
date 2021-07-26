@@ -9,27 +9,27 @@
     <div>
         <label>First Name</label>
         <input type="text" th:field="*{firstName}">
-        <div style="color: #ff0026" th:if="${#fields.hasErrors('firstName')}" th:error="*{firstName}"></div>
+        <div style="color: #ff0026" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
     </div>
     <div>
         <label>Last Name</label>
         <input type="text" th:field="*{lastName}">
-        <div style="color: red" th:if="${#fields.hasErrors('lastName')}" th:error="*{lastName}"></div>
+        <div style="color: red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
     </div>
     <div>
         <label>Number Phone</label>
         <input type="text" th:field="*{numberPhone}">
-        <div style="color: red" th:if="${#fields.hasErrors('numberPhone')}" th:error="*{numberPhone}"></div>
+        <div style="color: red" th:if="${#fields.hasErrors('numberPhone')}" th:errors="*{numberPhone}"></div>
     </div>
     <div>
         <label>Age</label>
         <input type="text" th:field="*{age}">
-        <div style="color: red" th:if="${#fields.hasErrors('age')}" th:error="*{age}"></div>
+        <div style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></div>
     </div>
     <div>
         <label>Email</label>
         <input type="text" th:field="*{email}">
-        <div style="color: red" th:if="${#fields.hasErrors('email')}" th:error="*{email}"></div>
+        <div style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
     </div>
     <div>
         <input type="submit" value="Save">

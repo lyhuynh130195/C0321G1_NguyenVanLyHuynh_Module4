@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${success}"></p>
+<p th:text="${notFind}"></p>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Name Author</th>
+        <th>Release Year</th>
+        <th>Amount</th>
+        <th>Details</th>
+    </tr>
+    <tr th:each="book:${listBook}">
+        <td th:text="*{book.id}"></td>
+        <td th:text="*{book.name}"></td>
+        <td th:text="*{book.nameAuthor}"></td>
+        <td th:text="*{book.releaseYear}"></td>
+        <td th:text="*{book.amount}"></td>
+        <td><a th:href="@{/book/details/{id}(id=${book.id})}">Details</a></td>
+    </tr>
+</table>
+<form th:action="@{/book/retrospect}">
+    <input type="text" name="id">
+    <input type="submit" value="Retrospect Book">
+</form>
+</body>
+</html>

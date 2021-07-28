@@ -40,7 +40,7 @@ public class BookController {
     public String retrospectBook(@RequestParam int id,RedirectAttributes redirectAttributes){
         Book book = bookService.findById(id);
         if(book==null){
-            redirectAttributes.addFlashAttribute("notFind","Not find book with id = "+id);
+            redirectAttributes.addFlashAttribute("success","Not find book with id = "+id);
             return "redirect:/book/list";
         }else {
             redirectAttributes.addFlashAttribute("success","Retrospect Book success");

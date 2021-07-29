@@ -8,29 +8,29 @@
 </head>
 <body>
 <h1>Giỏ hàng của bạn</h1>
-<div class="container">
+<div th:if="${mapCart.isEmpty()}">
+    <h3 style="color:red;">Bạn chưa có sản phẩm nào</h3>
+</div>
+
+<div class="container" th:if="${!mapCart.isEmpty()}">
     <div th:each="entry:${mapCart}" class="row">
         <div class="col-md-4">
             <div>
-                <a th:href="@{/cart/{id}(id=${entry.getKey().id})}">X</a>
+                <a th:href="@{/remove/cart/{id}(id=${entry.getKey().id})}">X</a>
                 <img th:src="${entry.getKey().img}" style="width: 80%;height: auto"></img>
             </div>
         </div>
         <div class="col-md-8">
-            <h3>Thông tin đơn hàng</h3>
-            <strong>Sản phẩm :</strong><strong th:text="${entry.getKey().name}"></strong><br>
-
-            <strong>Giá :</strong><strong th:text="${entry.getKey().price}"></strong><br>
-
-            <strong>Số lượng :</strong><strong th:text="${entry.getValue()}"></strong><br>
-
-            <strong>Tổng tiền</strong><strong th:text="${entry.getValue()}*${entry.getKey().price}"></strong><br>
-
             <form th:object="${oder}" th:action="@{/oder/{id}(id=${entry.getKey().id})}" method="get">
                 <input type="hidden" th:field="*{id}">
-                <input type="hidden" th:field="*{nameProduct}" th:value="${entry.getKey().name}">
-                <input type="hidden" th:field="*{amountProduct}" th:value="${entry.getValue()}">
-                <input type="hidden" th:field="*{priceProduct}" th:value="${entry.getKey().price}">
+                <strong style="min-width: 75px">Sản phẩm :</strong> <input type="text" th:fields="*{nameProduct}"
+                                                   th:value="${entry.getKey().name}" readonly><br>
+                <strong style="min-width: 75px">Số lượng :</strong><input th:name="x" id="total" onchange="functionTotal()"
+                                                  th:value="${entry.getValue()}" th:fields="*{amountProduct}"
+                                                  type="number"><br>
+                <strong style="min-width: 75px">Giá :</strong> <input type="text" th:fields="*{priceProduct}"th:value="${entry.getKey().price}" readonly><br>
+
+                <strong style="min-width: 75px">Tổng tiền : </strong><strong th:text="${entry.getValue()}*${entry.getKey().price}"></strong><br>
                 <input type="submit" value="Thanh toán">
             </form>
         </div>
@@ -39,5 +39,10 @@
 <script src="/jquery/jquery-3.5.1.min.js"></script>
 <script src="/jquery/popper.min.js"></script>
 <script src="/js/bootstrap.js"></script>
+<script>
+    function functionTotal() {
+        return document.getElementById(total).value;
+    }
+</script>
 </body>
 </html>

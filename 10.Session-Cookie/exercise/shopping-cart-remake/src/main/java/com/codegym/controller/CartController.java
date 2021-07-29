@@ -23,7 +23,7 @@ public class CartController {
        model.addAttribute("oder",new Oder());
         return new ModelAndView("cart/list","mapCart",mapCart);
     }
-    @GetMapping("/{id}")
+    @GetMapping("/remove/{id}")
     public ModelAndView deleteCart(@SessionAttribute(value = "cart",required = false)CartDto cart, Model model, @PathVariable Long id){
         ProductDto productDto = cart.findProductDtoById(id);
         cart.removeProductDtoMap(productDto);

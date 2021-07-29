@@ -15,14 +15,25 @@ public class Oder {
 
     private int amountProduct;
 
+    private int totalMoney;
+
     public Oder() {
     }
 
-
-    public Oder(String nameProduct, Double priceProduct, int amountProduct) {
+    public Oder(Long id, String nameProduct, Double priceProduct, int amountProduct, int totalMoney) {
+        this.id = id;
         this.nameProduct = nameProduct;
         this.priceProduct = priceProduct;
         this.amountProduct = amountProduct;
+        this.totalMoney = totalMoney;
+    }
+
+    public int getTotalMoney() {
+        return totalMoney;
+    }
+
+    public void setTotalMoney(int totalMoney) {
+        this.totalMoney = totalMoney;
     }
 
     public Long getId() {

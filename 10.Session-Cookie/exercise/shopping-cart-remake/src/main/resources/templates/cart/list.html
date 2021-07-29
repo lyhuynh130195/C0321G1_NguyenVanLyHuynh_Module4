@@ -31,7 +31,7 @@
                                                   type="number"><br>
                 <strong style="min-width: 75px">Giá :</strong> <input id="price" type="text" th:fields="*{priceProduct}"th:value="${entry.getKey().price}" readonly><br>
 
-                <strong style="min-width: 75px">Tổng tiền : </strong><input id="money" th:value="${entry.getValue()}*${entry.getKey().price}" readonly><br>
+                <strong style="min-width: 75px">Tổng tiền : </strong><input id="money" th:fields="*{totalMoney}" th:value="${entry.getValue()}*${entry.getKey().price}" readonly><br>
                 <input type="submit" value="Thanh toán">
             </form>
         </div>

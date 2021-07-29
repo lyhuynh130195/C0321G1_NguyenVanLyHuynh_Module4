@@ -24,11 +24,11 @@ public class CartController {
         return new ModelAndView("cart/list","mapCart",mapCart);
     }
     @GetMapping("/remove/{id}")
-    public ModelAndView deleteCart(@SessionAttribute(value = "cart",required = false)CartDto cart, Model model, @PathVariable Long id){
+    public ModelAndView deleteCart(@SessionAttribute(value = "cart",required = false)CartDto cart, @PathVariable Long id){
         ProductDto productDto = cart.findProductDtoById(id);
         cart.removeProductDtoMap(productDto);
         Map<ProductDto,Integer> mapCart = cart.getProductDtoMap();
-        model.addAttribute("oder",new Oder());
+
         return new ModelAndView("cart/list","mapCart",mapCart);
     }
 

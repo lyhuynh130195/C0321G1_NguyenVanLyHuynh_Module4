@@ -10,30 +10,28 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/category")
+@RequestMapping(value = "/api")
 public class CategoryController {
     @Autowired
     BlogService blogService;
     @Autowired
     CategoryService categoryService;
 
-    @GetMapping
-    public ResponseEntity<Page<Category>> findAllCategory(@PageableDefault(value = 3,sort = "date")Pageable pageable){
-        Page<Category> categoryPage = categoryService.findAllCategory(pageable);
+    @GetMapping(value = "/category")
+    public ResponseEntity<Page<Category>> findAllCategory(@RequestParam int page,
+                                                          @RequestParam int size){
+        Page<Category> categoryPage = categoryService.findAllCategory(page, size);
         if(categoryPage.isEmpty()){
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(categoryPage,HttpStatus.OK);
     }
-    @GetMapping(value = "/{id}")
-    public ResponseEntity<Page<Blog>> findAllBlogByCategoryId(@PageableDefault(value = 3)Pageable pageable, @PathVariable int id){
-        Page<Blog> blogPage = blogService.findAllBlogByCategoryID(pageable,id);
+    @GetMapping(value = "/{categoryId}")
+    public ResponseEntity<Page<Blog>> findAllBlogByCategoryId(@PageableDefault(value = 3)Pageable pageable, @PathVariable int categoryId){
+        Page<Blog> blogPage = blogService.findAllBlogByCategoryID(pageable,categoryId);
         if(blogPage.isEmpty()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

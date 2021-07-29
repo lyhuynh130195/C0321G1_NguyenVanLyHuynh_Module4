@@ -27,4 +27,16 @@ public class BlogServiceImpl implements BlogService{
     public Page<Blog> findAllBlogByCategoryID(Pageable pageable,int id) {
         return blogRepository.findAllByCategory_Id(pageable,id);
     }
+
+    @Override
+    public void save(Blog blog) {
+        blogRepository.save(blog);
+    }
+
+    @Override
+    public void delete(Blog blog) {
+        blogRepository.delete(blog);
+    }
+
+
 }

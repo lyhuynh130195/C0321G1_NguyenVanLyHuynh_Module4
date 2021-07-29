@@ -14,6 +14,7 @@
 
 <div class="container" th:if="${!mapCart.isEmpty()}">
     <div th:each="entry:${mapCart}" class="row">
+
         <div class="col-md-4">
             <div>
                 <a th:href="@{/remove/cart/{id}(id=${entry.getKey().id})}">X</a>
@@ -28,9 +29,9 @@
                 <strong style="min-width: 75px">Số lượng :</strong><input th:name="x" id="total" onchange="functionTotal()"
                                                   th:value="${entry.getValue()}" th:fields="*{amountProduct}"
                                                   type="number"><br>
-                <strong style="min-width: 75px">Giá :</strong> <input type="text" th:fields="*{priceProduct}"th:value="${entry.getKey().price}" readonly><br>
+                <strong style="min-width: 75px">Giá :</strong> <input id="price" type="text" th:fields="*{priceProduct}"th:value="${entry.getKey().price}" readonly><br>
 
-                <strong style="min-width: 75px">Tổng tiền : </strong><strong th:text="${entry.getValue()}*${entry.getKey().price}"></strong><br>
+                <strong style="min-width: 75px">Tổng tiền : </strong><strong id="money" th:text="${entry.getValue()}*${entry.getKey().price}"></strong><br>
                 <input type="submit" value="Thanh toán">
             </form>
         </div>
@@ -41,7 +42,9 @@
 <script src="/js/bootstrap.js"></script>
 <script>
     function functionTotal() {
-        return document.getElementById(total).value;
+        var total = document.getElementById("total").value;
+        var price = document.getElementById("price").value;
+        document.getElementById("money").value = total * price;
     }
 </script>
 </body>

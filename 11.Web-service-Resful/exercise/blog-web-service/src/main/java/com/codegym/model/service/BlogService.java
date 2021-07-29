@@ -12,4 +12,8 @@ public interface BlogService {
     Optional<Blog> findById(int id);
 
     Page<Blog> findAllBlogByCategoryID(Pageable pageable,int id);
+
+    void save(Blog blog);
+
+    void delete(Blog blog);
 }

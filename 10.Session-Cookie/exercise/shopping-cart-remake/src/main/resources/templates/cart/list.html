@@ -31,7 +31,7 @@
                                                   type="number"><br>
                 <strong style="min-width: 75px">Giá :</strong> <input id="price" type="text" th:fields="*{priceProduct}"th:value="${entry.getKey().price}" readonly><br>
 
-                <strong style="min-width: 75px">Tổng tiền : </strong><strong id="money" th:text="${entry.getValue()}*${entry.getKey().price}"></strong><br>
+                <strong style="min-width: 75px">Tổng tiền : </strong><input id="money" th:value="${entry.getValue()}*${entry.getKey().price}" readonly><br>
                 <input type="submit" value="Thanh toán">
             </form>
         </div>
@@ -42,8 +42,8 @@
 <script src="/js/bootstrap.js"></script>
 <script>
     function functionTotal() {
-        var total = document.getElementById("total").value;
-        var price = document.getElementById("price").value;
+        let total = document.getElementById("total").value;
+        let price = document.getElementById("price").value;
         document.getElementById("money").value = total * price;
     }
 </script>

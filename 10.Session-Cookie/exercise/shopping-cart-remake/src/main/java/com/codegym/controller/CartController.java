@@ -18,18 +18,19 @@ import java.util.Map;
 public class CartController {
 
     @GetMapping
-    public ModelAndView showCart(@SessionAttribute(value = "cart",required = false)CartDto cart, Model model){
-        Map<ProductDto,Integer> mapCart =cart.getProductDtoMap();
-       model.addAttribute("oder",new Oder());
-        return new ModelAndView("cart/list","mapCart",mapCart);
+    public ModelAndView showCart(@SessionAttribute(value = "cart", required = false) CartDto cart, Model model) {
+        Map<ProductDto, Integer> mapCart = cart.getProductDtoMap();
+        model.addAttribute("oder", new Oder());
+        return new ModelAndView("cart/list", "mapCart", mapCart);
     }
+
     @GetMapping("/remove/{id}")
-    public ModelAndView deleteCart(@SessionAttribute(value = "cart",required = false)CartDto cart, @PathVariable Long id){
+    public ModelAndView deleteCart(@SessionAttribute(value = "cart", required = false) CartDto cart, @PathVariable Long id) {
         ProductDto productDto = cart.findProductDtoById(id);
         cart.removeProductDtoMap(productDto);
-        Map<ProductDto,Integer> mapCart = cart.getProductDtoMap();
+        Map<ProductDto, Integer> mapCart = cart.getProductDtoMap();
 
-        return new ModelAndView("cart/list","mapCart",mapCart);
+        return new ModelAndView("cart/list", "mapCart", mapCart);
     }
 
 }

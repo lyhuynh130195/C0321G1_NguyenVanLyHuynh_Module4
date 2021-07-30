@@ -52,7 +52,7 @@ public class ProductController {
         BeanUtils.copyProperties(productOptional.get(), productDto);
         cart.addProductDto(productDto);
 
-        redirectAttributes.addFlashAttribute("success", "Thêm 1"  +
+        redirectAttributes.addFlashAttribute("success", "Thêm 1" +
                 " " + productDto.getName() + " vào giỏ hàng thành công");
         return "redirect:/shop";
 

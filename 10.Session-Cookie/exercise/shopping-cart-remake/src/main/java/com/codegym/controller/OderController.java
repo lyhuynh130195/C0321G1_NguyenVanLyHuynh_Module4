@@ -6,7 +6,6 @@ import com.codegym.model.entity.Oder;
 import com.codegym.model.service.OderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -16,13 +15,14 @@ public class OderController {
 
     @Autowired
     OderService oderService;
+
     @GetMapping(value = "/{id}")
-    public String saveCart(@ModelAttribute Oder oder, @SessionAttribute(value = "cart",required = false)CartDto cart,
-                           RedirectAttributes redirectAttributes, @PathVariable Long id, Model model){
+    public String saveCart(@ModelAttribute Oder oder, @SessionAttribute(value = "cart", required = false) CartDto cart,
+                           RedirectAttributes redirectAttributes, @PathVariable Long id) {
         oderService.save(oder);
-        ProductDto productDto =cart.findProductDtoById(id);
+        ProductDto productDto = cart.findProductDtoById(id);
         cart.removeProductDtoMap(productDto);
-        redirectAttributes.addFlashAttribute("success","Thanh toán thành công");
+        redirectAttributes.addFlashAttribute("success", "Thanh toán thành công");
         return "redirect:/shop";
     }
 }

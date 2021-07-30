@@ -27,7 +27,11 @@
                 //tên API
                 url: "/smartphones",
                 //xử lý khi thành công
-                success: successHandler
+                success: function (smartphone){
+                    let template = getSmartphone(smartphone);
+                    // document.getElementById('smartphoneList').innerHTML = content;
+                    document.getElementById('block').insertAdjacentHTML("afterend", template)
+                }
 
             });
             //chặn sự kiện mặc định của thẻ
@@ -51,37 +55,38 @@
                     for (let i = 0; i < data.length; i++) {
                         content += getSmartphone(data[i]);
                     }
-                    document.getElementById('smartphoneList').innerHTML = content;
+
                 }
             });
         }
 
         function getSmartphone(smartphone) {
-            return `<tr><td >${smartphone.producer}</td><td >${smartphone.model}</td><td >${smartphone.price}</td>` +
-                `<td><a class="deleteSmartphone" href="${smartphone.id}">Delete</a></td></tr>`;
+            return `<tr id="tr-${smartphone.id}"><td >${smartphone.producer}</td>`+
+                    `<td >${smartphone.model}</td><td >${smartphone.price}</td>` +
+                `<td><button class="deleteSmartphone" onclick="deleteSmartPhone(${smartphone.id})" type="button" >Delete</button></td>`;
         }
 
-        $(document).ready(function () {
-            //sư kiện nào thực hiện Ajax
-            $('.deleteSmartphone').click(function (event) {
-                //lay du lieu
-                let a = $(this);
-                let smartphoneId = a.attr("href");
+        function deleteSmartPhone(id) {
+            console.log(id)
+            let element = document.getElementById('tr-'+ id);
+
                 // goi ajax
                 $.ajax({
                     type: "DELETE",
                     //tên API
-                    url: `/smartphones/${smartphoneId}`,
+                    url: `/smartphones/${id}`,
                     //xử lý khi thành công
                     success: function (data) {
-                        a.parent().parent().remove();
+                        element.remove();
                     }
 
                 });
                 //chặn sự kiện mặc định của thẻ
                 event.preventDefault();
-            });
-        })
+        }
+
+            //sư kiện nào thực hiện Ajax
+
     </script>
 </head>
 <body>
@@ -107,18 +112,18 @@
 </form>
 <h1>Smartphone List</h1>
 <table id="smartphoneList">
-    <tr>
+    <tr id = "block">
         <td>Producer</td>
         <td>Model</td>
         <td>Price</td>
         <td>Delete</td>
     </tr>
     <th:block th:each="smartphone: ${smartphones}">
-        <tr>
+        <tr th:id="'tr-'+${smartphone.id}">
             <td th:text="${smartphone.producer}"></td>
             <td th:text="${smartphone.model}"></td>
             <td th:text="${smartphone.price}"></td>
-            <td><a class="deleteSmartphone" th:href="${smartphone.getId()}">Delete</a></td>
+            <td><button class="deleteSmartphone" th:onclick="'deleteSmartPhone(\'' + ${smartphone.id} + '\')'" type="button" >Delete</button></td>
         </tr>
     </th:block>
 </table>

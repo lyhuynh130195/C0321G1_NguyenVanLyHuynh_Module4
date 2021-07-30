@@ -17,9 +17,8 @@ public class SmartphoneRestController {
     private SmartPhoneService smartPhoneService;
 
     @PostMapping
-    public ResponseEntity<Void> createSmartphone(@RequestBody SmartPhone smartPhone) {
-        smartPhoneService.save(smartPhone);
-        return new ResponseEntity<>( HttpStatus.CREATED);
+    public ResponseEntity<SmartPhone> createSmartphone(@RequestBody SmartPhone smartPhone) {
+        return ResponseEntity.ok(smartPhoneService.save(smartPhone));
     }
 
     @GetMapping

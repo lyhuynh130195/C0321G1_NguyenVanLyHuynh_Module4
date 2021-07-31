@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Show</title>
+  <style>
+    p{
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+<a href="/blog">Back to list</a>
+<p>Id :</p>
+<span  th:text="${blog.id}"></span>
+<p>Name :</p>
+<span  th:text="${blog.name}"></span>
+<p>Content :</p>
+<span th:text="${blog.content}" ></span>
+</body>
+</html>

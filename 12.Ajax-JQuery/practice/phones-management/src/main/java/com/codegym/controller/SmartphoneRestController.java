@@ -5,6 +5,7 @@ import com.codegym.model.service.SmartPhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -17,8 +18,9 @@ public class SmartphoneRestController {
     private SmartPhoneService smartPhoneService;
 
     @PostMapping
-    public ResponseEntity<SmartPhone> createSmartphone(@RequestBody SmartPhone smartPhone) {
-        return ResponseEntity.ok(smartPhoneService.save(smartPhone));
+    public ResponseEntity<Void> createSmartphone(@RequestBody SmartPhone smartPhone) {
+        smartPhoneService.save(smartPhone);
+        return new ResponseEntity(HttpStatus.OK);
     }
 
     @GetMapping
@@ -41,5 +43,16 @@ public class SmartphoneRestController {
         }
         smartPhoneService.remove(id);
         return new ResponseEntity<>(smartphoneOptional.get(), HttpStatus.NO_CONTENT);
+    }
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> updateSmartphone(@RequestBody SmartPhone smartPhone, @PathVariable Long id, Model model) {
+        Optional<SmartPhone> smartphoneOptional = smartPhoneService.findById(id);
+        if (!smartphoneOptional.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        model.addAttribute("smartPhoneUpdate",smartphoneOptional.get());
+        smartPhoneService.save(smartPhone);
+        return new ResponseEntity(HttpStatus.OK);
+
     }
 }

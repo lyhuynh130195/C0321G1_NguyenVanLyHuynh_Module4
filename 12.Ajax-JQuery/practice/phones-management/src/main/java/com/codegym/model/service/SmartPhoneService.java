@@ -9,7 +9,7 @@ public interface SmartPhoneService {
 
     Optional<SmartPhone> findById(Long id);
 
-    SmartPhone save(SmartPhone smartPhone);
+    void save(SmartPhone smartPhone);
 
     void remove(Long id);
 }

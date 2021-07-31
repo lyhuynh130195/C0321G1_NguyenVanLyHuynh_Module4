@@ -22,8 +22,8 @@ public class SmartPhoneServiceImpl implements SmartPhoneService{
     }
 
     @Override
-    public SmartPhone save(SmartPhone smartPhone) {
-         return smartPhoneRepository.save(smartPhone);
+    public void save(SmartPhone smartPhone) {
+          smartPhoneRepository.save(smartPhone);
     }
 
     @Override

@@ -23,7 +23,7 @@ public class BlogRestController {
     IBlogService blogService;
 
     @GetMapping
-    public ResponseEntity<Page<Blog>> listBlog(@PageableDefault(value = 3) Pageable pageable, @RequestParam Optional<String> name) {
+    public ResponseEntity<Page<Blog>> listBlog(@PageableDefault(value = 2) Pageable pageable, @RequestParam Optional<String> name) {
         String keywordName = "";
         if (name.isPresent()) {
             keywordName = name.get();

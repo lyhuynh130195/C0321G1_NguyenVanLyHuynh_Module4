@@ -13,9 +13,4 @@ public interface IBlogRepository extends JpaRepository<Blog,Integer> {
     Page<Blog> findAllByNameContaining(Pageable pageable, String name);
     Page<Blog> findAll(Pageable pageable);
 
-    @Query(value = "select * from blog where category_id = ?1",nativeQuery = true)
-    List<Blog> findAllBlogByCategory(Long category_id);
-
-    @Query(value = "select  * from blog where name like %?1%",nativeQuery = true)
-    List<Blog> findBlogByName(String name);
 }

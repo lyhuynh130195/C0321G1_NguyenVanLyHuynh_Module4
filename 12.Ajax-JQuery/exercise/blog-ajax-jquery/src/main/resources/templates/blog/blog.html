@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>List Blog</title>
+  <link rel="stylesheet" type="text/css" href="/bootstrap4/css/bootstrap.css">
+</head>
+<body>
+<h2>Blogs</h2>
+<p style="float: left;display: inline-block;height: 10%">Search by Name:</p>
+
+<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="inputName" name="name" autocomplete="off">
+<button class="btn btn-outline-success my-2 my-sm-0" type="button" id="search">Search</button>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Date time</th>
+    <th scope="col">Category</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<button class="btn btn-outline-primary my-2 my-sm-0" type="button" id="next">Next</button>
+<div class="alert alert-success" role="alert" style="display: none" id="check">No content</div>
+
+<script src="/jquery/jquery-3.5.1.min.js"></script>
+<script src="/jquery/popper.min.js"></script>
+<script src="/bootstrap4/js/bootstrap.js"></script>
+<script>
+  let page=0;
+
+  function successHandler() {
+    let name=$("#inputName").val();
+    $.ajax({
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      url: "http://localhost:8080/blog/api/?page=" +page +"&name="+name,
+      type: "GET",
+      success: function (data) {
+
+        if(typeof data === 'undefined' || !data.content.length){
+          $("#check").css("display","block");
+
+        }
+        let tr = [];
+        for (let i = 0; i < data.content.length; i++) {
+          tr.push('<tr>');
+          tr.push('<td>' + data.content[i].id + '</td>');
+          tr.push('<td>' + data.content[i].name + '</td>');
+          tr.push('<td>' + data.content[i].date + '</td>');
+          tr.push('<td>' + data.content[i].category.name + '</td>');
+          tr.push('</tr>');
+        }
+        $('table').append($(tr.join('')));
+      },
+      error: function(error) {
+        console.log(error);
+      }
+    })
+  }
+
+  $(document).ready(function () {
+    successHandler();
+  })
+
+  $("#search").click(function () {
+    page=0;
+    $('table').empty();
+    successHandler();
+  })
+
+  $("#next").click(function () {
+    page++;
+    successHandler();
+  })
+
+</script>
+</body>
+</html>

@@ -44,15 +44,19 @@ public class SmartphoneRestController {
         smartPhoneService.remove(id);
         return new ResponseEntity<>(smartphoneOptional.get(), HttpStatus.NO_CONTENT);
     }
-    @PutMapping("/{id}")
-    public ResponseEntity<Void> updateSmartphone(@RequestBody SmartPhone smartPhone, @PathVariable Long id, Model model) {
+    @PutMapping
+    public ResponseEntity<Void> updateSmartphone(@RequestBody SmartPhone smartPhone) {
+        smartPhoneService.save(smartPhone);
+        return new ResponseEntity(HttpStatus.OK);
+
+    }
+
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<SmartPhone> findSmartPhoneById(@PathVariable Long id){
         Optional<SmartPhone> smartphoneOptional = smartPhoneService.findById(id);
         if (!smartphoneOptional.isPresent()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        model.addAttribute("smartPhoneUpdate",smartphoneOptional.get());
-        smartPhoneService.save(smartPhone);
-        return new ResponseEntity(HttpStatus.OK);
-
+        return new ResponseEntity<>(smartphoneOptional.get(), HttpStatus.OK);
     }
 }

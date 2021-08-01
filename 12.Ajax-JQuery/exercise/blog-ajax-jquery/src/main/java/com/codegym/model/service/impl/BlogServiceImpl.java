@@ -16,6 +16,10 @@ public class BlogServiceImpl implements IBlogService {
     @Autowired
     IBlogRepository iBlogRepository;
 
+    @Override
+    public Page<Blog> findAllByNameContaining(Pageable pageable, String title) {
+        return iBlogRepository.findAllByNameContaining(pageable,title);
+    }
 
     @Override
     public Iterable<Blog> findAll() {
@@ -39,10 +43,6 @@ public class BlogServiceImpl implements IBlogService {
         iBlogRepository.deleteById(id);
     }
 
-    @Override
-    public Page<Blog> findAllByNameContaining(String name, Pageable pageable) {
-        return iBlogRepository.findAllByNameContaining(name,pageable);
-    }
 
 
     @Override

@@ -1,6 +1,8 @@
 package com.codegym.model.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -14,6 +16,7 @@ public class Blog {
     private String content;
     private Date date=new Date(System.currentTimeMillis());
 
+    @JsonManagedReference
     @ManyToOne
     @JoinColumn(name = "category_id",referencedColumnName = "id")
     private Category category;

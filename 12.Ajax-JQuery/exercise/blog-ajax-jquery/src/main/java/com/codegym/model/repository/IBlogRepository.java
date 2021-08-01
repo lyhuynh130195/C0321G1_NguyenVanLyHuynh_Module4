@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface IBlogRepository extends JpaRepository<Blog,Integer> {
 
-    Page<Blog> findAllByNameContaining(String name, Pageable pageable);
+    Page<Blog> findAllByNameContaining(Pageable pageable, String name);
     Page<Blog> findAll(Pageable pageable);
 
     @Query(value = "select * from blog where category_id = ?1",nativeQuery = true)

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="#{customer.title}"></title>
+  <style>
+    table {
+      border: 1px solid #000;
+    }
+
+    th, td {
+      border: 1px dotted #555;
+    }
+    #msg{
+      display: flex;
+      justify-content: left;
+    }
+  </style>
+</head>
+<body>
+<strong th:text="#{customer.language}"></strong> <a href="?lang=en">English</a> | <a href="?lang=vi">Viet Nam</a>
+
+<span th:if="${keyword}">
+  <p th:text="#{customer.search}"></p> <code>"[[${keyword}]]"</code>,
+  <a th:href="@{/customers}" th:text="#{customer.click}"></a>.
+  <br>
+</span>
+
+<div id="msg">
+  <p th:text="#{customer.text}"></p>
+  <p th:text="${customers.totalElements}"></p>
+  <p th:text="#{customer.customer}"></p>
+</div>
+
+<form>
+  <label>
+    <p th:text="#{customer.searchBy}"></p>
+    <input type="text" name="s">
+  </label>
+  <input type="submit" value="Search">
+</form>
+
+<table>
+  <caption th:text="#{customer.caption}"></caption>
+  <thead>
+  <tr>
+    <th th:text="#{customer.id}"></th>
+    <th th:text="#{customer.name}"></th>
+    <th th:text="#{customer.email}"></th>
+    <th th:text="#{customer.address}"></th>
+    <th th:text="#{customer.province}"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="c : ${customers}">
+    <td th:text="${c.id}"></td>
+    <td>
+      <a th:href="@{/customers/{id}(id=${c.id})}" th:text="${c.name}"></a>
+    </td>
+    <td th:text="${c.email}"></td>
+    <td th:text="${c.address}"></td>
+    <td th:text="${c.province?.name}"></td>
+  </tr>
+  </tbody>
+</table>
+<div>
+  <a th:if="${customers.hasPrevious()}"
+     th:href="@{'/customers'(page=${customers.number - 1}, size=${customers.size}, s=${keyword})}" th:text="#{customer.previous}">
+
+  </a>
+  [[${customers.number + 1}]]/[[${customers.totalPages}]]
+  <a th:if="${customers.hasNext()}"
+     th:href="@{'/customers'(page=${customers.number + 1}, size=${customers.size}, s=${keyword})}"
+  th:text="#{customer.next}">
+  </a>
+</div>
+</body>
+</html>

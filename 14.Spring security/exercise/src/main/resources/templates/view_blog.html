@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View</title>
+  <style>
+    .item{
+      display: flex;
+    }
+    #content{
+      display: inline-block;
+      width: 100%;
+      height: 80%;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <div class="item">
+    <b>ID:</b>
+    <b th:text="${blog.id}"></b>
+  </div>
+  <div class="item">
+    <b>Name blog:</b>
+    <b th:text="${blog.name}"></b>
+  </div>
+  <div class="item">
+    <b>Name Author:</b>
+    <b th:text="${blog.nameAuthor}"></b>
+  </div>
+  <div class="item">
+    <b>Category :</b>
+    <b th:text="${blog.category.name}"></b>
+  </div>
+  <div id="content">
+    <b>Content</b>
+    <p th:text="${blog.content}"></p>
+  </div>
+  <div class="item">
+    <b>Date write:</b>
+    <b th:text="${blog.date}"></b>
+  </div>
+
+</div>
+</body>
+</html>

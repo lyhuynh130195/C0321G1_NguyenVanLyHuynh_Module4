@@ -14,6 +14,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     MyUserDetailServiceImpl myUserDetailService;
 
     private BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(myUserDetailService).passwordEncoder(bCryptPasswordEncoder);
@@ -21,12 +22,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable()
-                .formLogin().defaultSuccessUrl("/blog/list").permitAll().and()
-                .authorizeRequests()
-                .antMatchers("/blog**","/user**").hasRole("ADMIN")
-                .antMatchers("/login*").permitAll()
+        http.csrf().disable().formLogin().defaultSuccessUrl("/blog/list").permitAll().
+                and().authorizeRequests()
+                .antMatchers("/blog/list").permitAll()
+                .antMatchers("/blog/create").hasAnyRole("ADMIN", "USER")
+                .antMatchers("/user/create").hasRole("ADMIN")
                 .anyRequest().authenticated();
+
 
     }
 }

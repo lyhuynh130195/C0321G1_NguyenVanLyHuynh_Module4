@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace="layout::head">
 </head>
 <body>
@@ -29,6 +30,9 @@
     <div th:if="${notFind}">
         <span th:text="${notFind}"></span>
     </div>
+</div>
+<div sec:authorize="isAuthenticated()">
+    <h1>Xin chào<label sec:authentication="principal.username"></label></h1>
 </div>
 <table id="blog">
     <thead>

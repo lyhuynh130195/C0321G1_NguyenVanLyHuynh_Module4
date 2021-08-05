@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<div th:insert="layout/header"></div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active" id="container-carousel">
+            <img class="d-block w-100" src="/img/img_1.jpg">
+        </div>
+        <div class="carousel-item" id="container-carousel2">
+            <img class="d-block w-100" src="/img/img_2.jpg">
+        </div>
+    </div>
+</div>
+</body>
+</html>

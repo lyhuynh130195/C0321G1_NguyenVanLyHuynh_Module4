@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+</head>
+<body>
+<div th:insert="layout/header"></div>
+<div class="container">
+    <form th:action="@{/customer/list}" class="search">
+        <label><input type="text" th:name="keyword" placeholder="Enter customer name"></label>
+        <label><input type="submit" value="search" class="item-search"></label>
+    </form>
+</div>
+
+
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Birthday</th>
+            <th scope="col">Gender</th>
+            <th scope="col">IdCard</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">EDIT</th>
+            <th scope="col">DELETE</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="customer,index :${customerList}">
+            <th scope="row" th:text="${index.index+1}"></th>
+            <td th:text="${customer.id}"></td>
+            <td th:text="${customer.name}"></td>
+            <td th:text="${customer.customerType.typeName}"></td>
+            <td th:text="${customer.birthday}"></td>
+            <td th:text="${customer.gender}"></td>
+            <td th:text="${customer.idCard}"></td>
+            <td th:text="${customer.phone}"></td>
+            <td th:text="${customer.email}"></td>
+            <td th:text="${customer.address}"></td>
+            <td><a th:href="@{/customer/{id}/edit(id=${customer.id})}">Edit</a></td>
+            <td><a th:href="@{/customer/{id}/delete(id=${customer.id})}">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <a th:href="@{/customer/list(page=${customerList.number - 1},keyword=${keywordValue})}"
+       th:if="${customerList.hasPrevious()}">Previous</a>
+    <span th:text="${customerList.number + 1}"></span>/<span th:text="${customerList.totalPages}"></span>
+    <a th:href="@{/customer/list(page=${customerList.number + 1},keyword=${keywordValue})}"
+       th:if="${customerList.hasNext()}">Next</a>
+</div>
+<div>
+        <span th:each="pageNo : ${#numbers.sequence(0, customerList.totalPages - 1)}">
+            <a th:href="@{/customer/list(page = ${pageNo},keyword=${keywordValue})}"
+               th:text="${pageNo + 1} "></a>
+        </span>
+</div>
+<!--<script src="/jquery/jquery-3.5.1.min.js"></script>-->
+<!--<script src="/jquery/popper.min.js"></script>-->
+<!--<script src="/js/bootstrap.js"></script>-->
+</body>
+</html>

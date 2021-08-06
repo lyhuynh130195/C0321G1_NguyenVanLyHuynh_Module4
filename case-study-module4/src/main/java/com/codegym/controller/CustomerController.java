@@ -56,6 +56,7 @@ public class CustomerController {
         }
         Customer customer = new Customer();
         BeanUtils.copyProperties(customerDto, customer);
+        customer.setFlags(1);
         redirectAttributes.addFlashAttribute("success", "create new customer successfully");
         customerService.save(customer);
         return "redirect:/customer/list";
@@ -67,7 +68,9 @@ public class CustomerController {
         Optional<Customer> customerOptional = customerService.findById(id);
 
         if (customerOptional.isPresent()) {
-            customerService.remove(customerOptional.get());
+          Customer customer =  customerOptional.get();
+          customer.setFlags(0);
+          customerService.save(customer);
             redirectAttributes.addFlashAttribute("success", "delete customer successfully");
             return "redirect:/customer/list";
         }

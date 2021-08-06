@@ -39,6 +39,8 @@ public class Customer {
 
     private String address;
 
+    private int flags;
+
     @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
     private List<Contract> contractList;
 }

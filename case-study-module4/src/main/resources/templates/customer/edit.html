@@ -14,8 +14,9 @@
         <input type="hidden"  th:field="*{id}">
         <label for="name">Customer Name</label>
         <input type="text" id="name" th:field="*{name}" placeholder="Customer name..">
+
         <label for="birthday">Birthday </label>
-        <input type="date" id="birthday" th:field="*{birthday}" placeholder="Birthday ..">
+        <input class="form-control" type="date" id="birthday" th:field="*{birthday}" placeholder="Birthday ..">
         <div style="color: #ff0026" th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}"></div>
 
         <div for="gender">Gender</div>

@@ -36,6 +36,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Page<Employee> findAllByName(Pageable pageable, String keyword) {
-        return employRepository.getCustomerBySearchingName(pageable,keyword);
+        return employRepository.getCustomerBySearchingName(pageable,"%"+keyword+"%");
     }
 }

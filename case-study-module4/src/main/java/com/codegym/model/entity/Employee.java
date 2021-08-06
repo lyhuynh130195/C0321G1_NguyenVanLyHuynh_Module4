@@ -34,6 +34,8 @@ public class Employee {
 
     private String address;
 
+    private int flags;
+
     @ManyToOne(targetEntity = Position.class)
     @JoinColumn(name = "position_id",referencedColumnName = "id")
     private Position position;

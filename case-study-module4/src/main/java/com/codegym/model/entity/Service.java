@@ -27,6 +27,8 @@ public class Service {
 
     private int maxPeople;
 
+    private int flags;
+
     @ManyToOne(targetEntity = RentType.class)
     @JoinColumn(name = "rent_type_id",referencedColumnName = "id")
     private RentType rentType;

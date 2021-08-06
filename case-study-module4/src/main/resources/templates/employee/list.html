@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <style>
+        #search-and-title{
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 130px;
+        }
+    </style>
+</head>
+<body>
+<div th:insert="layout/header"></div>
+<div th:if="${success}">
+    <strong th:text="${success}" style="color: red"></strong>
+</div>
+<div id="search-and-title">
+    <div id="items1">
+        <h2 style="color: #34ce57;position: relative;margin-top: 20px" >EMPLOYEE LIST</h2>
+    </div>
+    <div id="item2">
+        <form th:action="@{/employee/list}" id="item2-search">
+            <label><input type="text" th:name="keyword" placeholder="Enter employee name"></label>
+            <label><input type="submit" value="Search" class="item-search"></label>
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Name</th>
+            <th scope="col">Birthday</th>
+            <th scope="col">IdCard</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Position</th>
+            <th scope="col">EDIT</th>
+            <th scope="col">DELETE</th>
+            <th scope="col">View</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="employee,index :${employeeList}">
+            <th scope="row" th:text="${index.index+1}"></th>
+            <td th:text="${employee.name}"></td>
+            <td th:text="${employee.birthday}"></td>
+            <td th:text="${employee.idCard}"></td>
+            <td th:text="${employee.phone}"></td>
+            <td th:text="${employee.email}"></td>
+            <td th:text="${employee.address}"></td>
+            <td th:text="${employee.position.name}"></td>
+            <td><a class="btn btn-primary" role="button" th:href="@{/employee/{id}/edit(id=${employee.id})}">Edit</a></td>
+            <td>
+                <button th:onclick="|onDelete( '${employee.id}')|" type="button" class="btn btn-danger" data-toggle="modal"
+                        data-target="#exampleModal">Delete
+                </button>
+            </td>
+            <td><a class="btn btn-primary" role="button" th:href="@{/employee/{id}/view(id=${employee.id})}">View</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" th:href="@{/employee/list(page=${employeeList.number - 1},keyword=${keywordValue})}"
+                                     th:if="${employeeList.hasPrevious()}">Previous</a></li>
+            <li class="page-item" th:each="pageNo : ${#numbers.sequence(0, employeeList.totalPages - 1)}">
+                <a class="page-link" th:href="@{/employee/list(page = ${pageNo},keyword=${keywordValue})}"
+                   th:text="${pageNo + 1} "></a>
+            </li>
+            <li class="page-item"><a class="page-link" th:href="@{/employee/list(page=${employeeList.number + 1},keyword=${keywordValue})}"
+                                     th:if="${employeeList.hasNext()}">Next</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirm delete</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form  action="/employee/delete" method="post">
+                <input type="hidden" name="action" value="delete">
+                <input type="hidden" name="id" value="0" id="employeeDel">
+                <div class="modal-body">
+                    Bạn có chắc chắn muốn xóa ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                    <button type="submit" class="btn btn-primary">Có</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function onDelete(id) {
+        document.getElementById("employeeDel").value = id;
+    }
+</script>
+</body>
+</html>

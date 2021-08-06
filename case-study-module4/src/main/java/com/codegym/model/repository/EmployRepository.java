@@ -11,6 +11,6 @@ import org.springframework.data.repository.query.Param;
 public interface EmployRepository extends JpaRepository<Employee,Integer> {
     @Query(value = "select * " +
             "from employee " +
-            "where `name` like :keywordParam", nativeQuery = true)
+            "where flags=1 and `name` like :keywordParam", nativeQuery = true)
     Page<Employee> getCustomerBySearchingName(Pageable pageable, @Param("keywordParam") String keyword);
 }

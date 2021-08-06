@@ -18,7 +18,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CustomerDto {
-
+    private int id;
 
     private CustomerType customerType;
     @NotBlank

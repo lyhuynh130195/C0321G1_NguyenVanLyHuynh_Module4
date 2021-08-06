@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+</head>
+<body>
+<div th:insert="layout/header"></div>
+<div>Edit Customer</div>
+<div id="form">
+    <form th:action="@{/customer/update}" method="post" th:object="${customerDto}">
+        <input type="hidden"  th:field="*{id}">
+        <label for="name">Customer Name</label>
+        <input type="text" id="name" th:field="*{name}" placeholder="Customer name..">
+        <label for="birthday">Birthday </label>
+        <input type="date" id="birthday" th:field="*{birthday}" placeholder="Birthday ..">
+        <div style="color: #ff0026" th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}"></div>
+
+        <div for="gender">Gender</div>
+        <select id="gender" th:field="*{gender}">
+            <option value="Male">Male</option>
+            <option value="Flame">Flame</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="idCard">IDCard </label>
+        <input type="text" id="idCard" th:field="*{idCard}" placeholder="IDCard ..">
+        <div style="color: #ff0026" th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}"></div>
+
+
+        <label for="phone">Number Phone </label>
+        <input type="text" id="phone" th:field="*{phone}" placeholder="Number Phone ..">
+        <div style="color: #ff0026" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></div>
+
+
+        <label for="email">Email </label>
+        <input type="text" id="email" th:field="*{email}" placeholder="Email  ..">
+        <div style="color: #ff0026" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+
+
+        <label for="address">Address </label>
+        <input type="text" id="address" th:field="*{address}" placeholder="Address  ..">
+
+        <label for="customerType" >Customer Type :</label>
+        <select  id="customerType" th:field="*{customerType}" >
+            <option th:each="customerType : ${customerTypeList}"
+                    th:text="${customerType.typeName}"
+                    th:value="${customerType.id}"></option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<script src="/jquery/jquery-3.5.1.min.js"></script>
+<script src="/jquery/popper.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+</body>
+</html>

@@ -7,6 +7,9 @@
 </head>
 <body>
 <div th:insert="layout/header"></div>
+<div th:if="${success}">
+    <strong th:text="${success}" style="color: red"></strong>
+</div>
 <div class="container">
     <form th:action="@{/customer/list}" class="search">
         <label><input type="text" th:name="keyword" placeholder="Enter customer name"></label>
@@ -46,7 +49,11 @@
             <td th:text="${customer.email}"></td>
             <td th:text="${customer.address}"></td>
             <td><a th:href="@{/customer/{id}/edit(id=${customer.id})}">Edit</a></td>
-            <td><a th:href="@{/customer/{id}/delete(id=${customer.id})}">Delete</a></td>
+            <td>
+                <button th:onclick="|onDelete( '${customer.id}')|" type="button" class="btn btn-danger" data-toggle="modal"
+                        data-target="#exampleModal">Delete
+                </button>
+            </td>
         </tr>
         </tbody>
     </table>
@@ -64,8 +71,35 @@
                th:text="${pageNo + 1} "></a>
         </span>
 </div>
-<!--<script src="/jquery/jquery-3.5.1.min.js"></script>-->
-<!--<script src="/jquery/popper.min.js"></script>-->
-<!--<script src="/js/bootstrap.js"></script>-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirm delete</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form  action="/customer/delete" method="post">
+                <input type="hidden" name="action" value="delete">
+                <input type="hidden" name="id" value="0" id="customerDel">
+                <div class="modal-body">
+                    Bạn có chắc chắn muốn xóa ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                    <button type="submit" class="btn btn-primary">Có</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function onDelete(id) {
+        document.getElementById("customerDel").value = id;
+    }
+</script>
 </body>
 </html>

@@ -28,36 +28,79 @@ public class CustomerController {
     CustomerTypeService customerTypeService;
 
     @GetMapping(value = "/list")
-    public ModelAndView showCustomerList(@PageableDefault(value = 5) Pageable pageable,  @RequestParam Optional<String> keyword
-    , ModelMap modelMap){
-        String keywordValue ="";
-        if(keyword.isPresent()){
+    public ModelAndView showCustomerList(@PageableDefault(value = 5) Pageable pageable, @RequestParam Optional<String> keyword
+            , ModelMap modelMap) {
+        String keywordValue = "";
+        if (keyword.isPresent()) {
             keywordValue = keyword.get();
         }
-        modelMap.addAttribute("keywordValue",keywordValue);
+        modelMap.addAttribute("keywordValue", keywordValue);
 
-        return new ModelAndView("/customer/list","customerList",customerService.findAllByName(pageable,keywordValue));
+        return new ModelAndView("/customer/list", "customerList", customerService.findAllByName(pageable, keywordValue));
     }
+
     @GetMapping(value = "/create")
-    public String showCreateCustomer(ModelMap modelMap){
-        modelMap.addAttribute("customerDto",new CustomerDto());
-        modelMap.addAttribute("customerTypeList",customerTypeService.findAll());
+    public String showCreateCustomer(ModelMap modelMap) {
+        modelMap.addAttribute("customerDto", new CustomerDto());
+        modelMap.addAttribute("customerTypeList", customerTypeService.findAll());
         return "/customer/create";
     }
 
     @PostMapping(value = "/save")
     public String saveCustomer(@Validated @ModelAttribute CustomerDto customerDto, BindingResult bindingResult,
-                               RedirectAttributes redirectAttributes,ModelMap modelMap){
-        if(bindingResult.hasErrors()){
-            modelMap.addAttribute("customerDto",customerDto);
-            modelMap.addAttribute("customerTypeList",customerTypeService.findAll());
+                               RedirectAttributes redirectAttributes, ModelMap modelMap) {
+        if (bindingResult.hasErrors()) {
+            modelMap.addAttribute("customerDto", customerDto);
+            modelMap.addAttribute("customerTypeList", customerTypeService.findAll());
             return "/customer/create";
         }
         Customer customer = new Customer();
-        BeanUtils.copyProperties(customerDto,customer);
+        BeanUtils.copyProperties(customerDto, customer);
         redirectAttributes.addFlashAttribute("success", "create new customer successfully");
         customerService.save(customer);
-        return "redirect:customer/list";
+        return "redirect:/customer/list";
+    }
+
+    @PostMapping(value = "/delete")
+    public String reomveCustomer(@RequestParam(value = "id") int id, RedirectAttributes redirectAttributes) {
+
+        Optional<Customer> customerOptional = customerService.findById(id);
+
+        if (customerOptional.isPresent()) {
+            customerService.remove(customerOptional.get());
+            redirectAttributes.addFlashAttribute("success", "delete customer successfully");
+            return "redirect:/customer/list";
+        }
+        redirectAttributes.addFlashAttribute("success", "delete customer unsuccessful");
+        return "redirect:/customer/list";
+    }
+
+    @GetMapping(value = "/{id}/edit")
+    public String showEdit(@PathVariable int id, ModelMap modelMap) {
+        Optional<Customer> customerOptional = customerService.findById(id);
+        CustomerDto customerDto = new CustomerDto();
+        if (customerOptional.isPresent()) {
+            BeanUtils.copyProperties(customerOptional.get(), customerDto);
+            modelMap.addAttribute("customerDto", customerDto);
+            modelMap.addAttribute("customerTypeList", customerTypeService.findAll());
+            return "/customer/edit";
+        }
+        return "redirect:/customer/list";
+    }
+
+    @PostMapping(value = "/update")
+    public String update(@Validated @ModelAttribute CustomerDto customerDto, BindingResult bindingResult,
+                               RedirectAttributes redirectAttributes, ModelMap modelMap) {
+        if (bindingResult.hasErrors()) {
+            modelMap.addAttribute("customerDto", customerDto);
+            modelMap.addAttribute("customerTypeList", customerTypeService.findAll());
+            return "/customer/create";
+        }
+        Customer customer = new Customer();
+        BeanUtils.copyProperties(customerDto, customer);
+        redirectAttributes.addFlashAttribute("success", "update customer successfully");
+        customerService.save(customer);
+        return "redirect:/customer/list";
     }
 
 }

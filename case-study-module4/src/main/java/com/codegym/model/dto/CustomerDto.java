@@ -18,10 +18,11 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CustomerDto {
-    private int id;
+    @NotBlank(message = "id not can empty")
+    @Pattern(regexp = "^KH-\\d{4}$", message = "Id invalid")
+    private String id;
 
     private CustomerType customerType;
-    @NotBlank
     private String name;
     @NotBlank
 

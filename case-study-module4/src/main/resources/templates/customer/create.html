@@ -11,8 +11,16 @@
 <div><h1 style="color: #34ce57;text-align: center">Create Customer</h1></div>
 <div id="form">
   <form th:action="@{/customer/save}" method="post" th:object="${customerDto}">
+
+    <label for="id">Customer ID</label>
+    <input type="text" id="id" th:field="*{id}" placeholder="Customer ID..">
+    <div style="color: #ff0026" th:if="${#fields.hasErrors('id')}" th:errors="*{id}"></div>
+
+
     <label for="name">Customer Name</label>
     <input type="text" id="name" th:field="*{name}" placeholder="Customer name..">
+    <div style="color: #ff0026" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+
 
     <label for="birthday">Birthday </label>
     <input class="form-control" type="date" id="birthday" th:field="*{birthday}" placeholder="Birthday ..">

@@ -11,6 +11,6 @@ import org.springframework.data.repository.query.Param;
 public interface ContractDetailRepository extends JpaRepository<ContractDetail,Integer> {
     @Query(value = "select * " +
             "from contract_detail " +
-            "where flags =1 and id = :keywordParam", nativeQuery = true)
-    Page<ContractDetail> findAllByIdAndFlags(Pageable pageable, @Param("keywordParam") int keyword);
+            "where flags =1 ", nativeQuery = true)
+    Page<ContractDetail> findAllByIdAndFlags(Pageable pageable);
 }

@@ -17,10 +17,7 @@ public class ContractDetailServiceImpl implements ContractDetailService {
     @Autowired
     ContractDetailRepository contractDetailRepository;
 
-    @Override
-    public Page<ContractDetail> findAll(Pageable pageable, int keyword) {
-        return contractDetailRepository.findAllByIdAndFlags(pageable,keyword);
-    }
+
 
     @Override
     public List<ContractDetail> findAll() {
@@ -29,7 +26,7 @@ public class ContractDetailServiceImpl implements ContractDetailService {
 
     @Override
     public Page<ContractDetail> findAll(Pageable pageable) {
-        return contractDetailRepository.findAll(pageable);
+        return contractDetailRepository.findAllByIdAndFlags(pageable);
     }
 
     @Override

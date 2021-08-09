@@ -13,4 +13,5 @@ public interface ServiceRepository extends JpaRepository<Service,Integer> {
             "from service " +
             "where flags=1 and `name` like :keywordParam", nativeQuery = true)
     Page<Service> getCustomerBySearchingName(Pageable pageable, @Param("keywordParam") String keyword);
+
 }

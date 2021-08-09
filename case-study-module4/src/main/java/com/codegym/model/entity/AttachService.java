@@ -23,6 +23,8 @@ public class AttachService {
 
     private double cost;
 
+    private int unit;
+
     private String status;
 
     @OneToMany(mappedBy = "attachService",cascade = CascadeType.ALL)

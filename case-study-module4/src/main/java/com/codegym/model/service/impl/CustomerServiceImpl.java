@@ -16,13 +16,10 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
     CustomerRepository customerRepository;
-    @Override
-    public Page<Customer> findAll(Pageable pageable) {
-        return customerRepository.findAll(pageable);
-    }
+
 
     @Override
-    public Optional<Customer> findById(int id) {
+    public Optional<Customer> findById(String id) {
         return customerRepository.findById(id);
     }
 

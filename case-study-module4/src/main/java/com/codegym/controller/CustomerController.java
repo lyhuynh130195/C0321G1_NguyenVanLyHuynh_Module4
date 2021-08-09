@@ -63,7 +63,7 @@ public class CustomerController {
     }
 
     @PostMapping(value = "/delete")
-    public String reomveCustomer(@RequestParam(value = "id") int id, RedirectAttributes redirectAttributes) {
+    public String reomveCustomer(@RequestParam(value = "id") String id, RedirectAttributes redirectAttributes) {
 
         Optional<Customer> customerOptional = customerService.findById(id);
 
@@ -79,7 +79,7 @@ public class CustomerController {
     }
 
     @GetMapping(value = "/{id}/edit")
-    public String showEdit(@PathVariable int id, ModelMap modelMap) {
+    public String showEdit(@PathVariable String id, ModelMap modelMap) {
         Optional<Customer> customerOptional = customerService.findById(id);
         CustomerDto customerDto = new CustomerDto();
         if (customerOptional.isPresent()) {

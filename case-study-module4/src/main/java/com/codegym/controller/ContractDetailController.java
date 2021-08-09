@@ -1,8 +1,6 @@
 package com.codegym.controller;
 
 import com.codegym.model.dto.ContractDetailDto;
-import com.codegym.model.dto.ContractDto;
-import com.codegym.model.entity.Contract;
 import com.codegym.model.entity.ContractDetail;
 import com.codegym.model.service.AttachServiceService;
 import com.codegym.model.service.ContractDetailService;
@@ -89,6 +87,22 @@ public class ContractDetailController {
         contractDetail.setFlags(1);
         redirectAttributes.addFlashAttribute("success", "update contractDetail successfully");
         contractDetailService.save(contractDetail);
+        return "redirect:/contract_detail/list";
+    }
+
+    @PostMapping(value = "/delete")
+    public String removeContractDetail(@RequestParam(value = "id") int id, RedirectAttributes redirectAttributes) {
+
+        Optional<ContractDetail> contractDetailOptional = contractDetailService.findById(id);
+
+        if (contractDetailOptional.isPresent()) {
+            ContractDetail contractDetail =  contractDetailOptional.get();
+            contractDetail.setFlags(0);
+            contractDetailService.save(contractDetail);
+            redirectAttributes.addFlashAttribute("success", "delete contractDetail successfully");
+            return "redirect:/contract_detail/list";
+        }
+        redirectAttributes.addFlashAttribute("success", "delete contractDetail unsuccessful");
         return "redirect:/contract_detail/list";
     }
 

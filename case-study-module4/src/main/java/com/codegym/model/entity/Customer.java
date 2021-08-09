@@ -17,8 +17,7 @@ import java.util.List;
 
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private String id;
 
     @ManyToOne(targetEntity = CustomerType.class)
     @JoinColumn(name = "type_id",referencedColumnName = "id")

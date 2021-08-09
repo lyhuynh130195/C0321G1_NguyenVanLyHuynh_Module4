@@ -7,7 +7,6 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 public interface ContractDetailService extends GeneralService<ContractDetail> {
-    Page<ContractDetail> findAll(Pageable pageable,int keyword);
 
     public List<ContractDetail> findAll();
 }

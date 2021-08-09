@@ -23,7 +23,7 @@
   </div>
   <div id="item2">
     <form th:action="@{/contract_detail/list}" id="item2-search">
-      <label><input type="text" th:name="keyword" placeholder="Enter contract detail name"></label>
+      <label><input type="text" th:name="keyword" placeholder="Enter contract detail id"></label>
       <label><input type="submit" value="Search" class="item-search"></label>
     </form>
   </div>
@@ -47,7 +47,7 @@
     <tr th:each="contractDetail,index :${contractDetailList}">
       <th scope="row" th:text="${index.index+1}"></th>
       <td th:text="${contractDetail.id}"></td>
-      <td th:text="${contractDetail.contract,id}"></td>
+      <td th:text="${contractDetail.contract.id}"></td>
       <td th:text="${contractDetail.attachService.name}"></td>
       <td th:text="${contractDetail.quantity}"></td>
 

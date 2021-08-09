@@ -14,7 +14,6 @@ import javax.validation.constraints.Min;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ContractDetailDto {
-//  id contract attachService quantity
 
     private int id;
 

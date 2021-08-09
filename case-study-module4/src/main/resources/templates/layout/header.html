@@ -16,7 +16,7 @@
             display: flex;
         }
 
-        input[type=text], select {
+        input[type=text],input[type=number], select {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -94,8 +94,8 @@
                         Employee
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/employee/create">Thêm mới</a>
-                        <a class="dropdown-item" href="/employee/list">Xem danh sách</a>
+                        <a class="dropdown-item" href="/employee/create">Create New Employee</a>
+                        <a class="dropdown-item" href="/employee/list">Manager Employee </a>
                     </div>
                 </div>
             </li>
@@ -106,8 +106,8 @@
                         Customer
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/customer/create">Thêm mới</a>
-                        <a class="dropdown-item" href="/customer/list">Xem danh sách</a>
+                        <a class="dropdown-item" href="/customer/create">Create New Customer</a>
+                        <a class="dropdown-item" href="/customer/list">Manager Customer</a>
                     </div>
                 </div>
             </li>
@@ -118,9 +118,7 @@
                         Service
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="/service/create">Create New Service</a>
                     </div>
                 </div>
             </li>
@@ -131,9 +129,10 @@
                         Contract
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="/contract/list">Manager Contract</a>
+                        <a class="dropdown-item" href="/contract/create_contract">Create New Contract</a>
+                        <a class="dropdown-item" href="/contract_detail/create">Create New Contract Details</a>
+                        <a class="dropdown-item" href="/contract/list">Manager Contract </a>
                     </div>
                 </div>
             </li>

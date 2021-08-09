@@ -27,4 +27,7 @@ public class ContractDetail {
     private AttachService attachService;
 
     private int quantity;
+
+    private int flags;
+
 }

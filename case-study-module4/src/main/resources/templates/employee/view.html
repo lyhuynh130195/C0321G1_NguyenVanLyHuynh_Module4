@@ -1,10 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>View Employee</title>
+    <style>
+        #view-container{
+            background-color: #d0e7e7;
+            position: relative;
+            left: 25%;
+            height: auto;
+            width: 50%;
+            border: solid black 1px;
+            border-radius: 5px;
+        }
+        .view-item{
+            color: red;
+            padding: 5px;
+            margin-left: 50px;
+        }
+    </style>
 </head>
 <body>
+<div th:insert="layout/header"></div>
+<div style="color: #34ce57;text-align: center"><h1>Employee View</h1></div>
 
+<div id="view-container">
+    <div class="view-item">
+        <strong>ID : </strong>
+        <label th:text="${employee.id}"></label>
+    </div>
+    <div class="view-item">
+        <strong>Name : </strong>
+        <label th:text="${employee.name}"></label>
+    </div>
+    <div class="view-item">
+        <strong>Birthday : </strong>
+        <label th:text="${employee.birthday}"></label>
+    </div>
+    <div class="view-item">
+        <strong>IdCard : </strong>
+        <label th:text="${employee.idCard}"></label>
+    </div>
+    <div class="view-item">
+        <strong>Salary : </strong>
+        <label th:text="${employee.salary}"></label>
+    </div>
+    <div class="view-item">
+        <strong>Phone : </strong>
+        <label th:text="${employee.phone}"></label>
+    </div>
+    <div class="view-item">
+        <strong>Email : </strong>
+        <label th:text="${employee.email}"></label>
+    </div>
+    <div class="view-item">
+        <strong>Address : </strong>
+        <label th:text="${employee.address}"></label>
+    </div>
+    <div class="view-item">
+        <strong>Position : </strong>
+        <label th:text="${employee.position.name}"></label>
+    </div>
+    <div class="view-item">
+        <strong>Education : </strong>
+        <label th:text="${employee.education.name}"></label>
+    </div>
+    <div class="view-item">
+        <strong>Division : </strong>
+        <label th:text="${employee.division.name}"></label>
+    </div>
+</div>
 </body>
 </html>

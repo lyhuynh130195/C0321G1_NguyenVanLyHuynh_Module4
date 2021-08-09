@@ -5,7 +5,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.nio.file.Path;
+import java.util.List;
 
 public interface CustomerService extends GeneralService<Customer> {
     Page<Customer> findAllByName(Pageable pageable,String keyword);
+    List<Customer> findAll();
 }

@@ -116,10 +116,11 @@ public class EmployeeController {
             modelMap.addAttribute("divisionList", divisionService.findAll());
             modelMap.addAttribute("educationList", educationService.findAll());
             modelMap.addAttribute("appUserList", appUserService.findAll());
-            return "/employee/create";
+            return "/employee/edit";
         }
         Employee employee = new Employee();
         BeanUtils.copyProperties(employeeDto, employee);
+        employee.setFlags(1);
         redirectAttributes.addFlashAttribute("success", "update employee successfully");
         employeeService.save(employee);
         return "redirect:/employee/list";

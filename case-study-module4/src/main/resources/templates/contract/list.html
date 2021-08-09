@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <title>Contract</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+  <style>
+    #search-and-title{
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 130px;
+    }
+  </style>
+</head>
+<body>
+<div th:insert="layout/header"></div>
+<div th:if="${success}">
+  <strong th:text="${success}" style="color: red"></strong>
+</div>
+<div id="search-and-title">
+  <div id="items1">
+    <h2 style="color: #34ce57;position: relative;margin-top: 20px" >CONTRACT LIST</h2>
+  </div>
+  <div id="item2">
+    <form th:action="@{/contract/list}" id="item2-search">
+      <label><input type="text" th:name="keyword" placeholder="Enter customer name"></label>
+      <label><input type="submit" value="Search" class="item-search"></label>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">ID</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+      <th scope="col">Deposit</th>
+      <th scope="col">Total Money</th>
+      <th scope="col">Employee</th>
+      <th scope="col">Customer</th>
+      <th scope="col">Service</th>
+      <th scope="col">EDIT</th>
+      <th scope="col">DELETE</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="contract,index :${contractList}">
+      <th scope="row" th:text="${index.index+1}"></th>
+      <td th:text="${contract.id}"></td>
+      <td th:text="${contract.startDate}"></td>
+      <td th:text="${contract.endDate}"></td>
+      <td th:text="${contract.deposit}"></td>
+      <td th:text="${contract.totalMoney}"></td>
+      <td th:text="${contract.employee.name}"></td>
+      <td th:text="${contract.customer.name}"></td>
+      <td th:text="${contract.service.name}"></td>
+
+      <td><a class="btn btn-primary" role="button" th:href="@{/contract/{id}/edit(id=${contract.id})}">Edit</a></td>
+      <td>
+        <button th:onclick="|onDelete( '${contract.id}')|" type="button" class="btn btn-danger" data-toggle="modal"
+                data-target="#exampleModal">Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" th:href="@{/contract/list(page=${contractList.number - 1},keyword=${keywordValue})}"
+                               th:if="${contractList.hasPrevious()}">Previous</a></li>
+      <li class="page-item" th:each="pageNo : ${#numbers.sequence(0, contractList.totalPages - 1)}">
+        <a class="page-link" th:href="@{/contract/list(page = ${pageNo},keyword=${keywordValue})}"
+           th:text="${pageNo + 1} "></a>
+      </li>
+      <li class="page-item"><a class="page-link" th:href="@{/contract/list(page=${contractList.number + 1},keyword=${keywordValue})}"
+                               th:if="${contractList.hasNext()}">Next</a></li>
+    </ul>
+  </nav>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirm delete</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form  action="/contract/delete" method="post">
+        <input type="hidden" name="action" value="delete">
+        <input type="hidden" name="id" value="0" id="contractDel">
+        <div class="modal-body">
+          Bạn có chắc chắn muốn xóa ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+          <button type="submit" class="btn btn-primary">Có</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  function onDelete(id) {
+    document.getElementById("contractDel").value = id;
+  }
+</script>
+</body>
+</html>

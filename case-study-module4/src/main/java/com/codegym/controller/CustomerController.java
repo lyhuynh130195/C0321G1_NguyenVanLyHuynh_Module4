@@ -97,10 +97,11 @@ public class CustomerController {
         if (bindingResult.hasErrors()) {
             modelMap.addAttribute("customerDto", customerDto);
             modelMap.addAttribute("customerTypeList", customerTypeService.findAll());
-            return "/customer/create";
+            return "/customer/edit";
         }
         Customer customer = new Customer();
         BeanUtils.copyProperties(customerDto, customer);
+        customer.setFlags(1);
         redirectAttributes.addFlashAttribute("success", "update customer successfully");
         customerService.save(customer);
         return "redirect:/customer/list";

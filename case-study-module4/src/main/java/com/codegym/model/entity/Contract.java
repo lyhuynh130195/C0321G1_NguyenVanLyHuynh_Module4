@@ -24,6 +24,8 @@ public class Contract {
     @Column(name = "end_date",columnDefinition = "Date")
     private String endDate;
 
+    private int flags;
+
     private double deposit;
 
     private double totalMoney;

@@ -20,6 +20,8 @@ public class Service {
     private int id;
 
     private String name;
+//name code area cost maxPeople rentType serviceType poolArea numberOfFloors
+    private String code;
 
     private int area;
 

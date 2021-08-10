@@ -10,7 +10,7 @@
 <div th:insert="layout/header"></div>
 <div><h1 style="color: #34ce57;text-align: center">Create ContractDetail</h1></div>
 <div id="form">
-    <form th:action="@{/contract_detail/save}" method="post" th:object="${contractDetailDto}">
+    <form th:action="@{/contract_detail/update}" method="post" th:object="${contractDetailDto}">
         <input type="hidden" th:field="*{id}">
         <label for="contract">Contract :</label>
         <select id="contract" th:field="*{contract}">

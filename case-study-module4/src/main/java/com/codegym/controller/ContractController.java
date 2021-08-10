@@ -1,16 +1,10 @@
 package com.codegym.controller;
 
 import com.codegym.model.dto.ContractDto;
-import com.codegym.model.dto.CustomerDto;
 import com.codegym.model.entity.Contract;
-import com.codegym.model.entity.Customer;
-import com.codegym.model.service.ContractService;
-import com.codegym.model.service.CustomerService;
-import com.codegym.model.service.EmployeeService;
-import com.codegym.model.service.ServiceService;
+import com.codegym.model.service.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
@@ -35,6 +29,9 @@ public class ContractController {
     EmployeeService employeeService;
     @Autowired
     ServiceService serviceService;
+    @Autowired
+    RentTypeService rentTypeService;
+
     @GetMapping("/list")
     public ModelAndView showListContract(@PageableDefault(value = 3) Pageable pageable, @RequestParam Optional<String> keyword
             , ModelMap modelMap) {
@@ -69,6 +66,10 @@ public class ContractController {
         Contract contract = new Contract();
         BeanUtils.copyProperties(contractDto,contract);
         contract.setFlags(1);
+        double costService =  contract.getService().getCost();
+        double costRent = rentTypeService.findById(contract.getService().getRentType().getId()).get().getCost();
+        double totalCost = costRent+costService;
+        contract.setTotalMoney(totalCost);
         redirectAttributes.addFlashAttribute("success", "create new contract successfully");
         contractService.save(contract);
         return "redirect:/contract/list";

@@ -25,11 +25,6 @@
         <input type="number" id="deposit" th:field="*{deposit}" placeholder="deposit ..">
         <div style="color: #ff0026" th:if="${#fields.hasErrors('deposit')}" th:errors="*{deposit}"></div>
 
-        <label for="totalMoney">Total Money </label>
-        <input type="number" id="totalMoney" th:field="*{totalMoney}" placeholder="totalMoney ..">
-        <div style="color: #ff0026" th:if="${#fields.hasErrors('totalMoney')}" th:errors="*{totalMoney}"></div>
-
-
         <label for="customer" >Customer :</label>
         <select  id="customer" th:field="*{customer}" >
             <option th:each="customer : ${customerList}"

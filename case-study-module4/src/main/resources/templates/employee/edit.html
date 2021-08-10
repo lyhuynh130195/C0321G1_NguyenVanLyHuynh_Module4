@@ -10,7 +10,7 @@
 <div th:insert="layout/header"></div>
 <div><h1 style="color: #34ce57;text-align: center">Edit Employee</h1></div>
 <div id="form">
-  <form th:action="@{/employee/save}" method="post" th:object="${employeeDto}">
+  <form th:action="@{/employee/update}" method="post" th:object="${employeeDto}">
     <input type="hidden" th:field="*{id}">
     <label for="name">Employee Name</label>
     <input type="text" id="name" th:field="*{name}" placeholder="Customer name..">

@@ -29,9 +29,12 @@ public class ContractDetailController {
     @Autowired
     AttachServiceService attachServiceService;
 
-    @GetMapping("/list")
-    public ModelAndView showListContractDetail(@PageableDefault(value = 3) Pageable pageable) {
-        return new ModelAndView("/contract_detail/list", "contractDetailList",contractDetailService.findAll(pageable));
+    @RequestMapping("/list")
+    public ModelAndView showListContractDetail(@PageableDefault(value = 3) Pageable pageable,@RequestParam(required=false,name="keyword") Optional<String> keyword) {
+        if(!keyword.isPresent()){
+            return new ModelAndView("/contract_detail/list", "contractDetailList",contractDetailService.findAll(pageable));
+        }
+        return new ModelAndView("/contract_detail/list", "contractDetailList",contractDetailService.findAllByDate(pageable,Integer.parseInt(keyword.get())));
     }
 
     @GetMapping(value = "/create")

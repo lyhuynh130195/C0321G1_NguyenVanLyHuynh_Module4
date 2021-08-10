@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <meta charset="UTF-8">
+  <title>Service</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+</head>
+<body>
+<div th:insert="layout/header"></div>
+<div><h1 style="color: #34ce57;text-align: center">Edit Service</h1></div>
+<div id="form">
+  <form th:action="@{/service/update}" method="post" th:object="${serviceDto}">
+    <input type="hidden" th:field="*{id}">
+    <label for="name">Service Name</label>
+    <input type="text" id="name" th:field="*{name}" placeholder="Service name..">
+    <div style="color: #ff0026" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+
+    <label for="code">Code </label>
+    <input type="text" id="code" th:field="*{code}" placeholder="Code ..">
+    <div style="color: #ff0026" th:if="${#fields.hasErrors('code')}" th:errors="*{code}"></div>
+
+    <label for="area">Service Area </label>
+    <input class="form-control" type="number" id="area" th:field="*{area}" placeholder="Service Area ..">
+    <div style="color: #ff0026" th:if="${#fields.hasErrors('area')}" th:errors="*{area}"></div>
+
+
+    <label for="cost">Cost </label>
+    <input type="text" id="cost" th:field="*{cost}" placeholder="Cost ..">
+    <div style="color: #ff0026" th:if="${#fields.hasErrors('cost')}" th:errors="*{cost}"></div>
+
+
+
+    <label for="maxPeople">Max People </label>
+    <input type="text" id="maxPeople" th:field="*{maxPeople}" placeholder="Max People ..">
+    <div style="color: #ff0026" th:if="${#fields.hasErrors('maxPeople')}" th:errors="*{maxPeople}"></div>
+
+    <label for="poolArea">Pool Area </label>
+    <input type="text" id="poolArea" th:field="*{poolArea}" placeholder="Pool Area  ..">
+    <div style="color: #ff0026" th:if="${#fields.hasErrors('poolArea')}" th:errors="*{poolArea}"></div>
+
+    <label for="numberOfFloors">Number Of Floors</label>
+    <input type="text" id="numberOfFloors" th:field="*{numberOfFloors}" placeholder="Number Of Floors ..">
+    <div style="color: #ff0026" th:if="${#fields.hasErrors('numberOfFloors')}" th:errors="*{numberOfFloors}"></div>
+
+    <label for="standardRoom">StandardRoom </label>
+    <input type="text" id="standardRoom" th:field="*{standardRoom}" placeholder="StandardRoom  ..">
+
+    <label for="description">Description </label>
+    <input type="text" id="description" th:field="*{description}" placeholder="Description  ..">
+
+    <label for="rentType" >RentType  :</label>
+    <select  id="rentType" th:field="*{rentType}" >
+      <option th:each="rentType : ${rentTypeList}"
+              th:text="${rentType.name}"
+              th:value="${rentType.id}"></option>
+    </select>
+
+    <label for="serviceType" >Service Type :</label>
+    <select  id="serviceType" th:field="*{serviceType}" >
+      <option th:each="serviceType : ${serviceTypeList}"
+              th:text="${serviceType.name}"
+              th:value="${serviceType.id}"></option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<script src="/jquery/jquery-3.5.1.min.js"></script>
+<script src="/jquery/popper.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+</body>
+</html>

@@ -18,15 +18,20 @@ public class ContractDetailServiceImpl implements ContractDetailService {
     ContractDetailRepository contractDetailRepository;
 
 
+    @Override
+    public Page<ContractDetail> findAllByDate(Pageable pageable, int keyword) {
+        return contractDetailRepository.findAllByIdAndFlags(pageable,keyword);
+    }
 
     @Override
     public List<ContractDetail> findAll() {
         return contractDetailRepository.findAll();
     }
 
+
     @Override
     public Page<ContractDetail> findAll(Pageable pageable) {
-        return contractDetailRepository.findAllByIdAndFlags(pageable);
+        return contractDetailRepository.findAllByFlags(pageable);
     }
 
     @Override

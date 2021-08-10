@@ -23,7 +23,7 @@
   </div>
   <div id="item2">
     <form th:action="@{/contract_detail/list}" id="item2-search">
-      <label><input type="text" th:name="keyword" placeholder="Enter contract detail id"></label>
+      <label><input type="text"  th:name="keyword" placeholder="Enter contract detail id"></label>
       <label><input type="submit" value="Search" class="item-search"></label>
     </form>
   </div>
@@ -36,9 +36,11 @@
 
       <th scope="col">STT</th>
       <th scope="col">ID</th>
-      <th scope="col">Contract</th>
-      <th scope="col">AttachService</th>
+      <th scope="col">Customer Name</th>
+      <th scope="col">Service Name </th>
+      <th scope="col">AttachService Name</th>
       <th scope="col">Quantity</th>
+      <th scope="col">Total Money Contract</th>
       <th scope="col">EDIT</th>
       <th scope="col">DELETE</th>
     </tr>
@@ -47,9 +49,12 @@
     <tr th:each="contractDetail,index :${contractDetailList}">
       <th scope="row" th:text="${index.index+1}"></th>
       <td th:text="${contractDetail.id}"></td>
-      <td th:text="${contractDetail.contract.id}"></td>
+      <td th:text="${contractDetail.contract.customer.name}"></td>
+      <td th:text="${contractDetail.contract.service.name}"></td>
       <td th:text="${contractDetail.attachService.name}"></td>
       <td th:text="${contractDetail.quantity}"></td>
+      <td th:text="${contractDetail.quantity}*${contractDetail.attachService.cost}+${contractDetail.contract.totalMoney}"></td>
+
 
       <td><a class="btn btn-primary" role="button" th:href="@{/contract_detail/{id}/edit(id=${contractDetail.id})}">Edit</a></td>
       <td>

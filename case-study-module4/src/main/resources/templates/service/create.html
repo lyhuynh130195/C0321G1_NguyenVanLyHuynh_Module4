@@ -15,6 +15,10 @@
         <input type="text" id="name" th:field="*{name}" placeholder="Service name..">
         <div style="color: #ff0026" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
 
+        <label for="code">Code </label>
+        <input type="text" id="code" th:field="*{code}" placeholder="Code ..">
+        <div style="color: #ff0026" th:if="${#fields.hasErrors('code')}" th:errors="*{code}"></div>
+
         <label for="area">Service Area </label>
         <input class="form-control" type="number" id="area" th:field="*{area}" placeholder="Service Area ..">
         <div style="color: #ff0026" th:if="${#fields.hasErrors('area')}" th:errors="*{area}"></div>
@@ -23,6 +27,8 @@
         <label for="cost">Cost </label>
         <input type="text" id="cost" th:field="*{cost}" placeholder="Cost ..">
         <div style="color: #ff0026" th:if="${#fields.hasErrors('cost')}" th:errors="*{cost}"></div>
+
+
 
         <label for="maxPeople">Max People </label>
         <input type="text" id="maxPeople" th:field="*{maxPeople}" placeholder="Max People ..">
@@ -41,7 +47,6 @@
 
         <label for="description">Description </label>
         <input type="text" id="description" th:field="*{description}" placeholder="Description  ..">
-
 
         <label for="rentType" >RentType  :</label>
         <select  id="rentType" th:field="*{rentType}" >

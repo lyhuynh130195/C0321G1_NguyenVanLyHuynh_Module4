@@ -8,7 +8,7 @@
 </head>
 <body>
 <div th:insert="layout/header"></div>
-<div>Edit Customer</div>
+<div><h1 style="color: #34ce57;text-align: center">Edit Customer</h1></div>
 <div id="form">
     <form th:action="@{/customer/update}" method="post" th:object="${customerDto}">
         <input type="hidden"  th:field="*{id}">

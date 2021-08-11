@@ -14,8 +14,8 @@
 </head>
 <body>
 <div th:insert="layout/header"></div>
-<div th:if="${success}">
-    <strong th:text="${success}" style="color: red"></strong>
+<div  th:if="${success}">
+    <strong id="message" th:text="${success}" style="color: red"></strong>
 </div>
 <div id="search-and-title">
     <div id="items1">
@@ -111,6 +111,15 @@
     function onDelete(id) {
         document.getElementById("employeeDel").value = id;
     }
+</script>
+<script>
+    $(document).ready(function () {
+        $("#message").onchange(function () {
+            $("#message").fadeIn(3000,function () {
+                $("#message").fadeOut(3000);
+            });
+        })
+    })
 </script>
 </body>
 </html>

@@ -76,7 +76,7 @@
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-success" >
-    <a style="color:white;" class="navbar-brand" th:href="@{/home}">Furama</a>
+    <a style="color:white;" class="navbar-brand" href="/home">Furama</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -85,7 +85,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active" >
-                <a style="color:white;" class="nav-link" th:href="@{/home}">Home <span class="sr-only">(current)</span></a>
+                <a style="color:white;" class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <div class="dropdown">
@@ -126,12 +126,22 @@
             <li class="nav-item">
                 <div class="dropdown">
                     <button style="border: none;color: white" class="btn btn-outline-primary dropdown-toggle" type="button"
-                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Contract
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="/contract/list">Manager Contract</a>
                         <a class="dropdown-item" href="/contract/create_contract">Create New Contract</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button style="border: none;color: white" class="btn btn-outline-primary dropdown-toggle" type="button"
+                            id="dropdownMenuButton5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contract Detail
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="/contract_detail/create">Create New Contract Details</a>
                         <a class="dropdown-item" href="/contract_detail/list">Manager Contract Detail </a>
                     </div>

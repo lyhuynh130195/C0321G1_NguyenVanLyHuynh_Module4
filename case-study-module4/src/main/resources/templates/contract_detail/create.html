@@ -12,10 +12,10 @@
 <div id="form">
     <form th:action="@{/contract_detail/save}" method="post" th:object="${contractDetailDto}">
 
-        <label for="contract" >Contract :</label>
+        <label for="contract" >Contract of customer :</label>
         <select  id="contract" th:field="*{contract}" >
             <option th:each="contract : ${listContract}"
-                    th:text="${contract.id}"
+                    th:text="'KH :'+${contract.customer.name}+' ID-HD :'+${contract.id}"
                     th:value="${contract.id}"></option>
         </select>
 

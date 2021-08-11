@@ -26,8 +26,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().formLogin().loginPage("/login").defaultSuccessUrl("/home").permitAll().
                 and().authorizeRequests()
-                .antMatchers("/login").permitAll()
+                .antMatchers("home").permitAll()
+                .antMatchers("/employee/**").hasRole("ADMIN")
+                .antMatchers("/service/**").hasAnyRole("ADMIN","USER")
+                .antMatchers("/contract/**").hasAnyRole("ADMIN","USER")
+                .antMatchers("/customer/**").hasAnyRole("ADMIN","USER")
+                .antMatchers("/contract_detail/**").hasAnyRole("ADMIN","USER")
                 .anyRequest().authenticated();
+//        http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/error_403");
         http.authorizeRequests().and().rememberMe().tokenRepository(this.persistentTokenRepository())
                 .tokenValiditySeconds(36000);
     }

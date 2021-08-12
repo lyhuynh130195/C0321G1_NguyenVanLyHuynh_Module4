@@ -21,6 +21,6 @@ public class ContractDetailDto {
 
     private AttachService attachService;
 
-    @Min(value = 0,message = "quantity always > 0")
+    @Min(value = 1,message = "quantity always > 0")
     private int quantity;
 }

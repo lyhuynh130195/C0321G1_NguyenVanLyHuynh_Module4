@@ -16,9 +16,7 @@
 <body>
 
 <div th:insert="layout/header"></div>
-<div th:if="${success}">
-    <strong th:text="${success}" style="color: red"></strong>
-</div>
+
 <div id="search-and-title">
     <div id="items1">
         <h2 style="color: #34ce57;position: relative;margin-top: 20px" >CUSTOMER LIST</h2>
@@ -31,14 +29,16 @@
     </div>
 </div>
 
-
+<div  th:if="${success}" style="position: relative;margin: 10px 130px">
+    <strong id="message" th:text="${success}" style="color: limegreen;margin-bottom: 10px"></strong>
+</div>
 
 <div class="container">
     <table class="table table-hover">
         <thead>
         <tr>
             <th scope="col">STT</th>
-            <th scope="col">ID</th>
+            <th scope="col">Code</th>
             <th scope="col">Name</th>
             <th scope="col">Type</th>
             <th scope="col">Birthday</th>
@@ -54,7 +54,7 @@
         <tbody>
         <tr th:each="customer,index :${customerList}">
             <th scope="row" th:text="${index.index+1}"></th>
-            <td th:text="${customer.id}"></td>
+            <td th:text="${customer.code}"></td>
             <td th:text="${customer.name}"></td>
             <td th:text="${customer.customerType.typeName}"></td>
             <td th:text="${customer.birthday}"></td>
@@ -64,13 +64,11 @@
             <td th:text="${customer.email}"></td>
             <td th:text="${customer.address}"></td>
             <td><a class="btn btn-primary" role="button" th:href="@{/customer/{id}/edit(id=${customer.id})}">Edit</a></td>
-<!--            <td>-->
-<!--                <button  th:onclick="|onDelete( '${customer.id}')|" type="button" class="btn btn-danger" data-toggle="modal"-->
-<!--                        data-target="#exampleModal">Delete-->
-<!--                </button>-->
-<!--            </td>-->
+
             <td>
-                <button th:data1="${customer.id}" th:onclick="onDelete(this.getAttribute('data1')) " type="button" class="btn btn-danger" data-toggle="modal"
+                <button th:data1="${customer.id}" th:data2="${customer.name}"
+                        onclick="onDelete(this.getAttribute('data1'),this.getAttribute('data2'))"
+                        type="button" class="btn btn-danger" data-toggle="modal"
                          data-target="#exampleModal">Delete
                 </button>
             </td>
@@ -105,11 +103,12 @@
                 </button>
             </div>
             <form  action="/customer/delete" method="post">
-                <input type="hidden" name="action" value="delete">
-                <input type="hidden" name="id" value="" id="customerDel">
                 <div class="modal-body">
                     Bạn có chắc chắn muốn xóa ?
                 </div>
+                <input type="hidden" name="action" value="delete">
+                <input type="hidden" name="id" value="" id="customerDel">
+                <input type="text"  value="" id="customerName" readonly>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
                     <button type="submit" class="btn btn-primary">Có</button>
@@ -121,8 +120,9 @@
 
 
 <script>
-    function onDelete(id) {
+    function onDelete(id,name) {
         document.getElementById("customerDel").value = id;
+        document.getElementById("customerName").value = name;
     }
 </script>
 

@@ -12,6 +12,10 @@
 <div id="form">
     <form th:action="@{/customer/update}" method="post" th:object="${customerDto}">
         <input type="hidden"  th:field="*{id}">
+
+        <label for="code">Customer Code</label>
+        <input type="text" id="code" th:field="*{code}" placeholder="Customer code..">
+
         <label for="name">Customer Name</label>
         <input type="text" id="name" th:field="*{name}" placeholder="Customer name..">
 

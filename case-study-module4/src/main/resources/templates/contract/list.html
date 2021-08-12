@@ -14,9 +14,7 @@
 </head>
 <body>
 <div th:insert="layout/header"></div>
-<div th:if="${success}">
-  <strong th:text="${success}" style="color: red"></strong>
-</div>
+
 <div id="search-and-title">
   <div id="items1">
     <h2 style="color: #34ce57;position: relative;margin-top: 20px" >CONTRACT LIST</h2>
@@ -27,6 +25,10 @@
       <label><input type="submit" value="Search" class="item-search"></label>
     </form>
   </div>
+</div>
+
+<div  th:if="${success}" style="position: relative;margin: 10px 130px">
+  <strong id="message" th:text="${success}" style="color: limegreen;margin-bottom: 10px"></strong>
 </div>
 
 <div class="container">

@@ -1,13 +1,14 @@
 package com.codegym.model.dto;
 
-import com.codegym.model.entity.Customer;
 import com.codegym.model.entity.CustomerType;
+import com.codegym.until.Unique;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
@@ -19,11 +20,15 @@ import java.util.List;
 @NoArgsConstructor
 public class CustomerDto {
 
-    @NotBlank(message = "id not can empty")
-    @Pattern(regexp = "^KH-\\d{4}$", message = "Id invalid")
-    private String id;
+    private int id;
+
+    @NotBlank(message = "Code not can empty")
+    @Pattern(regexp = "^KH-\\d{4}$", message = "Id invalid KH-XXXX")
+    @Unique(message = "Duplicate code please re-enter")
+    private String code;
 
     private CustomerType customerType;
+    @NotBlank
     private String name;
     @NotBlank
 

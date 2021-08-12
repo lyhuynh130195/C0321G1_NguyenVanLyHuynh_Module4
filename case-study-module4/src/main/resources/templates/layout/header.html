@@ -59,24 +59,30 @@
 
         #name-user {
             display: flex;
+
         }
+        #logout{
+            position: relative;
+            margin-right: 10px;
+        }
+
     </style>
 </head>
 <body>
 <div id="logo-and-username">
-    <div>
+    <div id="img">
         <img src="/img/FURAMA.jpg" style="width: 80px;height: 100px">
     </div>
-    <div style="margin-top: 20px" sec:authorize="isAuthenticated()" id="name-user">
-        <strong style="color: red;margin: 8px 30px" sec:authentication="principal.username"></strong>
-        <div>
-            <a href="/logout" class="btn btn-info" role="button">Log out</a>
+    <div style="margin-top: 25px" sec:authorize="isAuthenticated()" id="name-user">
+        <strong style="color: white;margin: 8px 20px" sec:authentication="principal.username"></strong>
+        <div id="logout">
+            <a href="/logout" class="btn btn-success" role="button">Log out</a>
         </div>
     </div>
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-success" >
-    <a style="color:white;" class="navbar-brand" href="/home">Furama</a>
+    <a class="btn btn-success" href="/home" role="button">Furama</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -85,7 +91,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active" >
-                <a style="color:white;" class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                <a class="btn btn-success" href="/home" role="button">Home</a>
             </li>
             <li class="nav-item">
                 <div class="dropdown">

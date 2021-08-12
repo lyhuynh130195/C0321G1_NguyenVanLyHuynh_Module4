@@ -16,9 +16,7 @@
 <body>
 
 <div th:insert="layout/header"></div>
-<div th:if="${success}">
-  <strong th:text="${success}" style="color: red"></strong>
-</div>
+
 <div id="search-and-title">
   <div id="items1">
     <h2 style="color: #34ce57;position: relative;margin-top: 20px" >SERVICE LIST</h2>
@@ -30,7 +28,9 @@
     </form>
   </div>
 </div>
-
+<div  th:if="${success}" style="position: relative;margin: 10px 130px">
+  <strong id="message" th:text="${success}" style="color: limegreen;margin-bottom: 10px"></strong>
+</div>
 
 
 <div class="container">
@@ -67,7 +67,7 @@
       <td th:text="${service.numberOfFloors}"></td>
 
       <td><a class="btn btn-primary" role="button" th:href="@{/service/{id}/edit(id=${service.id})}">Edit</a></td> <td>
-      <button th:onclick="|onDelete( '${service.id}')|" type="button" class="btn btn-danger" data-toggle="modal"
+      <button  th:onclick="|onDelete( '${service.id}')|" type="button" class="btn btn-danger" data-toggle="modal"
               data-target="#exampleModal">Delete
       </button>
     </td>

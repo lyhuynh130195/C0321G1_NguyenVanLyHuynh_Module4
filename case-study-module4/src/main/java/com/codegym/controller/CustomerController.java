@@ -57,13 +57,13 @@ public class CustomerController {
         Customer customer = new Customer();
         BeanUtils.copyProperties(customerDto, customer);
         customer.setFlags(1);
-        redirectAttributes.addFlashAttribute("success", "create new customer successfully");
+        redirectAttributes.addFlashAttribute("success", "Create new customer successfully");
         customerService.save(customer);
         return "redirect:/customer/list";
     }
 
     @PostMapping(value = "/delete")
-    public String reomveCustomer(@RequestParam(value = "id") String id, RedirectAttributes redirectAttributes) {
+    public String reomveCustomer(@RequestParam(value = "id") int id, RedirectAttributes redirectAttributes) {
 
         Optional<Customer> customerOptional = customerService.findById(id);
 
@@ -71,15 +71,15 @@ public class CustomerController {
           Customer customer =  customerOptional.get();
           customer.setFlags(0);
           customerService.save(customer);
-            redirectAttributes.addFlashAttribute("success", "delete customer successfully");
+            redirectAttributes.addFlashAttribute("success", "Delete customer successfully");
             return "redirect:/customer/list";
         }
-        redirectAttributes.addFlashAttribute("success", "delete customer unsuccessful");
+        redirectAttributes.addFlashAttribute("success", "Delete customer unsuccessful");
         return "redirect:/customer/list";
     }
 
     @GetMapping(value = "/{id}/edit")
-    public String showEdit(@PathVariable String id, ModelMap modelMap) {
+    public String showEdit(@PathVariable int id, ModelMap modelMap) {
         Optional<Customer> customerOptional = customerService.findById(id);
         CustomerDto customerDto = new CustomerDto();
         if (customerOptional.isPresent()) {
@@ -102,7 +102,7 @@ public class CustomerController {
         Customer customer = new Customer();
         BeanUtils.copyProperties(customerDto, customer);
         customer.setFlags(1);
-        redirectAttributes.addFlashAttribute("success", "update customer successfully");
+        redirectAttributes.addFlashAttribute("success", "Update customer successfully");
         customerService.save(customer);
         return "redirect:/customer/list";
     }

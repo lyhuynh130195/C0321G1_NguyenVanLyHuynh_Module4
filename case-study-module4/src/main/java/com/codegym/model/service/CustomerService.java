@@ -12,7 +12,7 @@ public interface CustomerService  {
     Page<Customer> findAllByName(Pageable pageable,String keyword);
     List<Customer> findAll();
 
-    Optional<Customer> findById(String id);
+    Optional<Customer> findById(int id);
 
     void save(Customer t);
 

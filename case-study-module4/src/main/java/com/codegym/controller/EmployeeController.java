@@ -70,7 +70,7 @@ public class EmployeeController {
         Employee employee = new Employee();
         BeanUtils.copyProperties(employeeDto, employee);
         employee.setFlags(1);
-        redirectAttributes.addFlashAttribute("success", "create new employee successfully");
+        redirectAttributes.addFlashAttribute("success", "Create new employee successfully");
         employeeService.save(employee);
         return "redirect:/employee/list";
     }
@@ -84,10 +84,10 @@ public class EmployeeController {
             Employee employee = employeeOptional.get();
             employee.setFlags(0);
             employeeService.save(employee);
-            redirectAttributes.addFlashAttribute("success", "delete employee successfully");
+            redirectAttributes.addFlashAttribute("success", "Delete employee successfully");
             return "redirect:/employee/list";
         }
-        redirectAttributes.addFlashAttribute("success", "delete employee unsuccessful");
+        redirectAttributes.addFlashAttribute("success", "Delete employee unsuccessful");
         return "redirect:/employee/list";
     }
 
@@ -121,7 +121,7 @@ public class EmployeeController {
         Employee employee = new Employee();
         BeanUtils.copyProperties(employeeDto, employee);
         employee.setFlags(1);
-        redirectAttributes.addFlashAttribute("success", "update employee successfully");
+        redirectAttributes.addFlashAttribute("success", "Update employee successfully");
         employeeService.save(employee);
         return "redirect:/employee/list";
     }

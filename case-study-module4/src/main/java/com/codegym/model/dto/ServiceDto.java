@@ -27,13 +27,13 @@ public class ServiceDto {
     @NotBlank(message = "code not empty")
     private String code;
 
-    @Min(value = 0,message = "area always > 0")
+    @Min(value = 1,message = "area always > 0")
     private int area;
 
-    @Min(value = 0,message = "cost always > 0")
+    @Min(value = 1,message = "cost always > 0")
     private double cost;
 
-    @Min(value = 0,message = "maxPeople always > 0")
+    @Min(value = 1,message = "maxPeople always > 0")
     private int maxPeople;
 
     private RentType rentType;
@@ -44,7 +44,7 @@ public class ServiceDto {
 
     private String description;
 
-    @Min(value = 0,message = "poolArea always > 0")
+    @Min(value = 1,message = "poolArea always > 0")
     private double poolArea;
 
     private int numberOfFloors;

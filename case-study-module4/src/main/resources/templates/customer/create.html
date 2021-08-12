@@ -12,9 +12,9 @@
 <div id="form">
   <form th:action="@{/customer/save}" method="post" th:object="${customerDto}">
 
-    <label for="id">Customer ID</label>
-    <input type="text" id="id" th:field="*{id}" placeholder="Customer ID..">
-    <div style="color: #ff0026" th:if="${#fields.hasErrors('id')}" th:errors="*{id}"></div>
+    <label for="code">Customer Code</label>
+    <input type="text" id="code" th:field="*{code}" placeholder="Customer code..">
+    <div style="color: #ff0026" th:if="${#fields.hasErrors('code')}" th:errors="*{code}"></div>
 
 
     <label for="name">Customer Name</label>

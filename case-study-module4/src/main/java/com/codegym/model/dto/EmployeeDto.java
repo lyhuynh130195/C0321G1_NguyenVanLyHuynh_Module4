@@ -29,7 +29,7 @@ public class EmployeeDto {
     private String idCard;
 
 
-    @Min(value = 0,message = "salary > 0")
+    @Min(value = 1,message = "salary > 0")
     private double salary;
 
     @NotBlank

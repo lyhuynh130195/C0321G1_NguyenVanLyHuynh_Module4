@@ -14,9 +14,7 @@
 </head>
 <body>
 <div th:insert="layout/header"></div>
-<div  th:if="${success}">
-    <strong id="message" th:text="${success}" style="color: red"></strong>
-</div>
+
 <div id="search-and-title">
     <div id="items1">
         <h2 style="color: #34ce57;position: relative;margin-top: 20px" >EMPLOYEE LIST</h2>
@@ -28,7 +26,9 @@
         </form>
     </div>
 </div>
-
+<div  th:if="${success}" style="position: relative;margin: 10px 130px">
+    <strong id="message" th:text="${success}" style="color: limegreen;margin-bottom: 10px"></strong>
+</div>
 <div class="container">
     <table class="table table-hover">
         <thead>
@@ -58,7 +58,8 @@
             <td th:text="${employee.position.name}"></td>
             <td><a class="btn btn-primary" role="button" th:href="@{/employee/{id}/edit(id=${employee.id})}">Edit</a></td>
             <td>
-                <button th:onclick="|onDelete( '${employee.id}')|" type="button" class="btn btn-danger" data-toggle="modal"
+                <button th:dataId="${employee.id}" th:dataName="${employee.name}"
+                        onclick="onDelete(this.getAttribute('dataId'),this.getAttribute('dataName'))" type="button" class="btn btn-danger" data-toggle="modal"
                         data-target="#exampleModal">Delete
                 </button>
             </td>
@@ -93,11 +94,13 @@
                 </button>
             </div>
             <form  action="/employee/delete" method="post">
-                <input type="hidden" name="action" value="delete">
-                <input type="hidden" name="id" value="0" id="employeeDel">
                 <div class="modal-body">
                     Bạn có chắc chắn muốn xóa ?
                 </div>
+                <input type="hidden" name="action" value="delete">
+                <input type="hidden" name="id" value="" id="employeeDel">
+                <input type="text" name="name" value="" id="employeeDelName" readonly>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
                     <button type="submit" class="btn btn-primary">Có</button>
@@ -108,18 +111,11 @@
 </div>
 
 <script>
-    function onDelete(id) {
+    function onDelete(id,name) {
         document.getElementById("employeeDel").value = id;
+        document.getElementById("employeeDelName").value = name;
     }
 </script>
-<script>
-    $(document).ready(function () {
-        $("#message").onchange(function () {
-            $("#message").fadeIn(3000,function () {
-                $("#message").fadeOut(3000);
-            });
-        })
-    })
-</script>
+
 </body>
 </html>

@@ -64,7 +64,7 @@ public class ServiceController {
         Service service = new Service();
         BeanUtils.copyProperties(serviceDto, service);
         service.setFlags(1);
-        redirectAttributes.addFlashAttribute("success", "create new service successfully");
+        redirectAttributes.addFlashAttribute("success", "Create new service successfully");
         serviceService.save(service);
         return "redirect:/service/list";
     }
@@ -78,10 +78,10 @@ public class ServiceController {
             Service service =  serviceOptional.get();
             service.setFlags(0);
             serviceService.save(service);
-            redirectAttributes.addFlashAttribute("success", "delete service successfully");
+            redirectAttributes.addFlashAttribute("success", "Delete service successfully");
             return "redirect:/service/list";
         }
-        redirectAttributes.addFlashAttribute("success", "delete service unsuccessful");
+        redirectAttributes.addFlashAttribute("success", "Delete service unsuccessful");
         return "redirect:/service/list";
     }
 
@@ -111,7 +111,7 @@ public class ServiceController {
         Service service = new Service();
         BeanUtils.copyProperties(serviceDto, service);
         service.setFlags(1);
-        redirectAttributes.addFlashAttribute("success", "update service successfully");
+        redirectAttributes.addFlashAttribute("success", "Update service successfully");
         serviceService.save(service);
         return "redirect:/service/list";
     }

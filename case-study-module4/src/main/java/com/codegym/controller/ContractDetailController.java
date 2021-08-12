@@ -57,7 +57,7 @@ public class ContractDetailController {
         ContractDetail contractDetail = new ContractDetail();
         BeanUtils.copyProperties(contractDetailDto, contractDetail);
         contractDetail.setFlags(1);
-        redirectAttributes.addFlashAttribute("success", "create new contractDetail successfully");
+        redirectAttributes.addFlashAttribute("success", "Create new contractDetail successfully");
         contractDetailService.save(contractDetail);
         return "redirect:/contract_detail/list";
     }
@@ -88,7 +88,7 @@ public class ContractDetailController {
         ContractDetail contractDetail = new ContractDetail();
         BeanUtils.copyProperties(contractDetailDto, contractDetail);
         contractDetail.setFlags(1);
-        redirectAttributes.addFlashAttribute("success", "update contractDetail successfully");
+        redirectAttributes.addFlashAttribute("success", "Update contractDetail successfully");
         contractDetailService.save(contractDetail);
         return "redirect:/contract_detail/list";
     }
@@ -102,10 +102,10 @@ public class ContractDetailController {
             ContractDetail contractDetail =  contractDetailOptional.get();
             contractDetail.setFlags(0);
             contractDetailService.save(contractDetail);
-            redirectAttributes.addFlashAttribute("success", "delete contractDetail successfully");
+            redirectAttributes.addFlashAttribute("success", "Delete contractDetail successfully");
             return "redirect:/contract_detail/list";
         }
-        redirectAttributes.addFlashAttribute("success", "delete contractDetail unsuccessful");
+        redirectAttributes.addFlashAttribute("success", "Delete contractDetail unsuccessful");
         return "redirect:/contract_detail/list";
     }
 

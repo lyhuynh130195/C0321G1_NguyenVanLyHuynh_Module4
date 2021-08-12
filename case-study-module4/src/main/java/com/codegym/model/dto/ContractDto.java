@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.util.List;
 
@@ -25,9 +26,10 @@ public class ContractDto {
 
     private String endDate;
 
-    @Min(value = 0,message = "deposit always > 0")
+    @Min(value = 1,message = "deposit always > 0")
+
     private double deposit;
-    @Min(value = 0,message = "totalMoney always > 0")
+    @Min(value = 1,message = "totalMoney always > 0")
     private double totalMoney;
 
     private Employee employee;

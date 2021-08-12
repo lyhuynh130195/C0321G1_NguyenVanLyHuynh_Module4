@@ -70,7 +70,7 @@ public class ContractController {
         double costRent = rentTypeService.findById(contract.getService().getRentType().getId()).get().getCost();
         double totalCost = costRent+costService;
         contract.setTotalMoney(totalCost);
-        redirectAttributes.addFlashAttribute("success", "create new contract successfully");
+        redirectAttributes.addFlashAttribute("success", "Create new contract successfully");
         contractService.save(contract);
         return "redirect:/contract/list";
     }
@@ -84,10 +84,10 @@ public class ContractController {
             Contract contract =  contractOptional.get();
             contract.setFlags(0);
             contractService.save(contract);
-            redirectAttributes.addFlashAttribute("success", "delete contract successfully");
+            redirectAttributes.addFlashAttribute("success", "Delete contract successfully");
             return "redirect:/contract/list";
         }
-        redirectAttributes.addFlashAttribute("success", "delete contract unsuccessful");
+        redirectAttributes.addFlashAttribute("success", "Delete contract unsuccessful");
         return "redirect:/contract/list";
     }
 
@@ -120,7 +120,7 @@ public class ContractController {
         Contract contract = new Contract();
         BeanUtils.copyProperties(contractDto, contract);
         contract.setFlags(1);
-        redirectAttributes.addFlashAttribute("success", "update contract successfully");
+        redirectAttributes.addFlashAttribute("success", "Update contract successfully");
         contractService.save(contract);
         return "redirect:/contract/list";
     }

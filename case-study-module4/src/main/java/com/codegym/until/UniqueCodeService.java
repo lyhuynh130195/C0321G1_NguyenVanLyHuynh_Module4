@@ -1,6 +1,6 @@
 package com.codegym.until;
 
-import com.codegym.until.impl.UniqueValidator;
+import com.codegym.until.impl.UniqueCodeServiceValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -13,9 +13,9 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Target({FIELD})
 @Retention(RUNTIME)
-@Constraint(validatedBy = UniqueValidator.class)
+@Constraint(validatedBy = UniqueCodeServiceValidator.class)
 @Documented
-public @interface Unique {
+public @interface UniqueCodeService {
 
     String message() default "Unique is not allowed.";
 

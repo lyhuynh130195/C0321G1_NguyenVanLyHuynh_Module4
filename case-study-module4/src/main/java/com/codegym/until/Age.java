@@ -1,5 +1,6 @@
 package com.codegym.until;
 
+import com.codegym.until.impl.AgeValidator;
 import com.codegym.until.impl.UniqueValidator;
 
 import javax.validation.Constraint;
@@ -13,14 +14,12 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Target({FIELD})
 @Retention(RUNTIME)
-@Constraint(validatedBy = UniqueValidator.class)
+@Constraint(validatedBy = AgeValidator.class)
 @Documented
-public @interface Unique {
-
-    String message() default "Unique is not allowed.";
+public @interface Age {
+    String message() default "Age must be more than 18";
 
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
-
 }

@@ -27,8 +27,8 @@ public class ContractDto {
     private String endDate;
 
     @Min(value = 1,message = "deposit always > 0")
-
     private double deposit;
+
     @Min(value = 1,message = "totalMoney always > 0")
     private double totalMoney;
 

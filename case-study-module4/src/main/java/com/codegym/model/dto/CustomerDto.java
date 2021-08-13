@@ -1,6 +1,7 @@
 package com.codegym.model.dto;
 
 import com.codegym.model.entity.CustomerType;
+import com.codegym.until.Age;
 import com.codegym.until.Unique;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,13 +29,16 @@ public class CustomerDto {
     private String code;
 
     private CustomerType customerType;
+
     @NotBlank
     private String name;
-    @NotBlank
 
+    @NotBlank
+    @Age
     private String birthday;
 
     private String gender;
+
     @NotBlank
     @Pattern(regexp = "^(\\d{9}||\\d{12})$", message = "idCard invalid")
     private String idCard;

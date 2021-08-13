@@ -10,6 +10,6 @@ import org.springframework.data.repository.query.Param;
 public interface CustomerRepository extends JpaRepository<Customer,Integer> {
     @Query(value = "select * " +
             "from customer " +
-            "where flags=1 and `name` like :keywordParam", nativeQuery = true)
+            "where flags=1 and concat(`name`,code) like :keywordParam", nativeQuery = true)
     Page<Customer> getCustomerBySearchingName(Pageable pageable, @Param("keywordParam") String keyword);
 }

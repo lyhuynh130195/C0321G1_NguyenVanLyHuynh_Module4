@@ -2,6 +2,7 @@ package com.codegym.model.dto;
 
 import com.codegym.model.entity.RentType;
 import com.codegym.model.entity.ServiceType;
+import com.codegym.until.UniqueCodeService;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,8 +24,10 @@ public class ServiceDto {
     @NotBlank(message = "Name not empty")
     private String name;
 
+
     @Pattern(regexp = "^DV-\\d{4}$", message = "Code invalid")
     @NotBlank(message = "code not empty")
+    @UniqueCodeService(message = "Duplicate code please re-enter")
     private String code;
 
     @Min(value = 1,message = "area always > 0")
